@@ -24,6 +24,7 @@ const Header = () => {
         <Col xs={18} sm={8} md={6} lg={4}>
           <NavLink className="nav-link ripple" exact to="/" aria-current="page">
             <div className="logo">
+              
               <img src={Logo} alt="Logo" />
             </div>
             {/* <p className="logo">Logo</p> */}

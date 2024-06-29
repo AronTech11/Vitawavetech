@@ -60,13 +60,19 @@
 
 @media (max-width: 576px) {
   .nav-link {
-      font-size: 14px; /* Further adjust font size for very small screens */
+      font-size: 18px; /* Further adjust font size for very small screens */
       margin-left: 20px; /* Reduce margin for very small screens */
       margin-right: 20px; /* Reduce margin for very small screens */
   }
 
   .logo {
-      font-size: 20px; /* Further adjust font size for very small screens */
+      font-size: 10px; /* Further adjust font size for very small screens */
+  }
+  .logo img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* This ensures the image covers the circular area */
   }
 }
 

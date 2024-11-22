@@ -1,115 +1,130 @@
 import React from "react";
-import { Row, Col } from "antd";
-import "./contain.css";
-import Wayne from "../../assets/WaynePenrod.jpg";
-import Peggy from "../../assets/PeggyPenrod.jpg";
+import { Row, Col, Card } from "antd";
+import CEO from "../../assets/images/Jason.jpg";
+import CTO from "../../assets/images/hingba.jpg";
+import COFounder from "../../assets/images/nam.jpeg";
+import COFounder1 from "../../assets/images/robin1.png";
+import COFounder2 from "../../assets/images/Aron1.jpg";
+import Deepanshu from "../../assets/images/deep.png";
+import Thanmi from "../../assets/images/thanmi1.png";
+import April from "../../assets/images/moi2.png";
+import BackGroundVideo from "../../assets/videos/world.mp4";
+// import BackGroundVideo1 from "../../assets/videos/video-2.mp4";
+
+
+import "./team.css";
+
+const { Meta } = Card;
 
 const teamMembers = [
   {
-    Wayne: "Wayne Penrod",
-    title: "Mentor",
-    description:
-      <div><p>I'm Wayne Penrod, and let me tell you, it's an absolute honor to be part of the Sunday school
-        teaching team at Parkview Church of the Nazarene. My heart is filled with gratitude as I reflect
-        on the journey that brought me here.
-      </p>
-        <p>
-          My spiritual journey traces back to a pivotal night in July 1973 when my wife, and I made a
-          life-altering decision to commit ourselves to Jesus Christ. That night marked the beginning of
-          a profound transformation in our lives, one that continues to resonate us to this day.
-          My life has been dedicated to supporting the spiritual growth of children, youth, and young
-          adults. There's nothing quite like witnessing the beautiful journey of these young souls as they
-          navigate their relationship with God. It's been an absolute privilege and one of the greatest
-          blessings of my life.
-        </p>
-        <p>
-          My involvement at Church of the Nazarene has been foundational in my life, defining my
-          purpose and bringing profound meaning to every moment. As the President of Nazarene Youth
-          International for several years and through various other positions within the church, I've had
-          the pleasure of serving and guiding our community with unwavering dedication.
-          Beyond my spiritual endeavours, my professional path has been diverse. From business
-          ventures to serving in the armed forces, each experience has enriched my life and provided
-          valuable lessons.
-        </p>
-        <p>
-          Looking ahead, I am filled with eagerness to continue my service at Parkview. I am committed
-          to doing everything in my power to encourage and support the next generation in their walk
-          with Christ. After all, there's nothing more fulfilling than being a guiding light for those who
-          are embarking on their own spiritual journey.</p>
-      </div>,
-    image: Wayne,
+    name: "Jason McGowin",
+    designation: "CEO",
+    qualifications: "Stanford MBA",
+    image: CEO,
   },
   {
-    Peggy: "Peggy Penrod",
-    title: "Mentor",
-    description: <div>
-      <p>Hello, I'm Peggy Penrod, and I am overjoyed to be part of the Sunday school teaching team at
-        Parkview Church of the Nazarene in Kettering. My spiritual journey took a transformative turn
-        during the Steven Marshly Revival in Belmont. That moment was profoundly special, as my
-        family and I accepted Jesus into our hearts together, forever changing our lives.
-      </p>
-      <p>
-        For the past five decades, I've had the incredible duty of mentoring children, youth, and young
-        adults on their spiritual journeys. It has been a joyous and blessed experience to witness so
-        many lives touched and transformed by God's love. I started teaching teenagers about God, and
-        seeing their faith grow has been truly rewarding.
-      </p>
-      <p>
-        In my journey, I've found that God's love is a constant presence, guiding and sustaining us
-        through all trials. It is this love that I seek to share with those around me, especially the young
-        minds and hearts eager to understand their place in God's plan. Through teaching, I aim to plant
-        seeds of faith that will blossom into a deep and abiding relationship with Christ.
-        As a Sunday school teacher, I see myself not just as an educator but as a messenger of the
-        Gospel, entrusted with the task of spreading God's word to all who will listen. It is a
-        responsibility that I do not take lightly, for I understand the profound impact that a single lesson
-        can have on a young soul seeking truth and meaning in their life.
-      </p>
-      <p>
-        Each Sunday, as I stand before my students, I am reminded of the immense privilege it is to be
-        called to this ministry. I am humbled by the opportunity to witness firsthand the transformative
-        power of God's love and the beauty of His grace. It is my prayer that I may continue to serve
-        faithfully, always seeking to lead others closer to Him who is the true source of all joy and
-        peace.
-      </p>
-      <p>
-        I am a proud graduate of Wright State University and have been a dedicated member of
-        Parkview Church of the Nazarene for many years. Beyond my work within the church, I am
-        also a businesswoman, which has given me a unique perspective on balancing faith and
-        professional life.
-        Thank you for allowing me to share a glimpse of my journey with you. It is my hope that
-        together, we may continue to grow in faith and love, drawing ever closer to God and His eternal
-        kingdom.
-      </p>
-    </div>,
-    image: Peggy,
+    name: "T Hingba",
+    designation: "CTO, Co-Founder",
+    qualifications: "MBA-MEng",
+    image: CTO,
+  },
+  {
+    name: "Robin Deterding",
+    designation: "Medical Advisor",
+    qualifications: "MD",
+    image: COFounder1,
+  },
+  {
+    name: "Nam Bui",
+    designation: "CSO - Technical Advisor",
+    qualifications: "Professor",
+    image: COFounder,
+  },
+  {
+    name: "Taluba Aron Hopson",
+    designation: "Project Engineer",
+    qualifications: "Msc",
+    image: COFounder2,
+  },
+  {
+    name: "Deepanshu Gupta",
+    designation: "Data Scientist",
+    qualifications: "Msc",
+    image: Deepanshu,
+  },
+  {
+    name: "Thanmi Maram",
+    designation: "Support",
+    qualifications: "",
+    image: Thanmi,
+  },
+  {
+    name: "April Yang",
+    designation: "Project Engineer",
+    qualifications: "",
+    image: April,
   },
 ];
 
 const Team = () => {
   return (
-    <div className="team-container">
-      <div className="team-header">
-        <h1>OUR TEAM</h1>
-        <p>
-          We believe that we are better together. Our staff has a blast serving
-          Jesus, His people, and each other. Let us know how we can help you
-          grow in your relationships, develop your gifts, and find success in
-          your life.
-        </p>
-      </div>
-      {teamMembers.map((member, index) => (
-        <Row key={index} className="team-member" justify="center">
-          <Col className="team-member-icon">
-            <img src={member.image} alt="Mentor" className="mentor-image" />
+    <main className="team-content">
+      {/* Background Video */}
+      <video autoPlay muted loop className="background-video">
+        <source src={BackGroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <Row>
+        <Col span={24}>
+          <h4 className="meet_team">
+            <span className="gradient-text">Empowering Innovation Through Diverse Expertise</span>
+          </h4>
+          <h4 className="meet_team">
+            <span className="gradient-text">
+              VitaWave Tech is dedicated to developing and commercializing
+              innovative eBP technology for blood pressure monitoring
+            </span>
+          </h4>
+          <h4 className="meet_team">
+            <span className="gradient-text">Meet the Team Members</span>
+          </h4>
+          
+        </Col>
+      </Row>
+
+      {/* Map through teamMembers to display each card */}
+      <Row justify="center" align="middle" className="team-info-section">
+        {teamMembers.map((member, index) => (
+          <Col
+            xs={24}
+            sm={24}
+            md={8}
+            lg={8}
+            xl={8}
+            key={index}
+            className="team-card-col"
+          >
+            <Card
+              hoverable
+              cover={
+                <img
+                  alt={member.name}
+                  src={member.image}
+                  className="team-image"
+                />
+              }
+            >
+              <Meta
+                title={member.name}
+                description={`${member.designation}, ${member.qualifications}`}
+              />
+            </Card>
           </Col>
-          <Col className="team-member-info">
-            <h2>{member.name}</h2>
-            <h3>{member.title}</h3>
-            <p>{member.description}</p>
-          </Col>
-        </Row>
-      ))}
-    </div>
+        ))}
+      </Row>
+    </main>
   );
 };
 

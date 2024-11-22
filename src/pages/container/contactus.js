@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Form, Input, Button } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
-import './contain.css';
+import './contactus.css';
 
 const ContactForm = () => {
   return (

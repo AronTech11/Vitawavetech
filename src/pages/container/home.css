@@ -1,89 +1,333 @@
-.content {
-  padding: 20px;
-  background-color: #e5e0da;
+/* Ensure the overall background of the page is white */
+body {
+  background-color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll due to animations */
 }
 
+/* Hero Section with the video */
 .hero-section {
   position: relative;
+  width: 100%;
+  height: 400px; /* Adjust this height based on your design needs */
+  background-color: white; /* White background for the hero section */
+  overflow: hidden; /* Prevent overflow in smaller containers */
+  animation: slideInLeft 1s ease-out; /* Add the slide-in from left animation */
 }
 
 .hero-image-container {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
-.welcome-section {
-  text-align: center;
-  margin-top: 20px;
+.hero-image-container video {
+  object-fit: cover; /* Ensures the video covers the container without distortion */
+  width: 100%;
+  height: 100%;
 }
 
-.welcome-section h1 {
-  font-size: 2.5rem;
-  color: #053246;
+/* Keyframe for the slide-in from left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  to {
+    transform: translateX(0); /* End at normal position */
+  }
 }
 
-.welcome-section p {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.schedule-button {
-  margin-top: 20px;
-  background-color: #053246;
-  border-color: #053246;
-}
-
-.faq-section {
-  margin-top: 40px;
-  background-color: #e4e0da;
-}
-
-.faq-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #00224e;
-}
-
-.faq-collapse {
-  background-color: transparent;
-}
-
-.faq-panel {
-  background-color: #053246 !important;
-  border-radius: 4px !important;
-  margin-bottom: 16px !important;
-  border: 0px !important;
-  overflow: hidden;
-}
-
-.faq-panel > .ant-collapse-header {
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.faq-panel > .ant-collapse-content {
-  background-color: #f0f0f0 !important;
-  color: #333;
-}
-
-
-:where(.css-j9bb5n).ant-collapse>.ant-collapse-item >.ant-collapse-header {
+/* Image Card Styling to ensure images are fully visible */
+.image-card {
   position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  padding: 12px 16px;
-  color: rgba(249, 244, 244, 0.88);
-  line-height: 1.5714285714285714;
-  cursor: pointer;
-  transition: all 0.3s, visibility 0s;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent image overflow */
+  animation: slideInRight 1s ease-out; /* Add the slide-in from right animation */
+}
+
+.detail-card {
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent image overflow */
+  animation: slideInRight 1s ease-out; /* Add the slide-in from right animation */
+}
+
+/* Keyframe for the slide-in from right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  to {
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+.detail-image{
+  
+    width: 100%;            /* Ensure the image takes up full width */
+    height: 280px;           /* Maintain the aspect ratio of the image */
+    max-height: 350px;      /* Limit the height for better control */
+    border-radius: 15px;    /* Optional: adds rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+
+
+.hero-image {
+  width: 100%;            /* Ensure the image takes up full width */
+  height: auto;           /* Maintain the aspect ratio of the image */
+  max-height: 350px;      /* Limit the height for better control */
+  object-fit: contain;    /* Ensure the full image is visible */
+  border-radius: 15px;    /* Optional: adds rounded corners */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for images */
+.hero-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Column text styles for better spacing */
+.col-text {
+  font-size: 1.3rem;
+  padding: 0px 40px 20px 20px;
+  animation: slideInLeft 1s ease-out; /* Add the slide-in from left animation */
+}
+
+/* Main info section styling */
+.info-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: slideIn 1s ease-out forwards;
+  padding: 0 5%; /* Added padding to center the content */
+  z-index: 1;
+  padding-bottom: 20px;
+  padding-top: 15px;
+  min-height: 200px;
+  background-color: white; /* White background for info section */
+}
+
+/* Image column styling to ensure proper display */
+.image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  animation: slideInRight 1s ease-out; /* Add the slide-in from right animation */
+}
+
+/* Adjust the height of the video and hero section for smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 450px; /* Increase height for smaller screens */
+  }
+
+  .hero-image-container {
+    height: 100%;
+  }
+
+  .hero-image-container video {
+    height: 100%; /* Ensure the video takes up the full height */
+  }
+
+  .hero-text {
+    font-size: 1.2rem; /* Slightly reduce font size for better readability */
+    top: 40%; /* Adjust the text position to be slightly higher */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 210px; /* Further increase the height for very small screens */
+  }
+
+  .hero-text {
+    font-size: 1rem; /* Further adjust font size for small screens */
+    top: 35%; /* Adjust the text position further */
+  }
+
+  .hero-image-container video {
+    height: auto; /* Let the video adjust to its container */
+  }
+}
+
+
+
+.info-card-col {
+  padding: 16px;
+}
+
+.detail-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+/* New styles for the added text above the video */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.cta-buttons {
+  margin-bottom: 1rem;
+}
+
+.cta-buttons .ant-btn {
+  margin: 0 10px;
+}
+
+.hero-text p strong {
+  font-weight: bold;
+}
+
+/* Darken the image in the .detail-image */
+.detail-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative; /* Position it relative for the pseudo-element */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Add a dark overlay to the image */
+.detail-image::before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the image but below the content */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for overlay */
+}
+
+/* Hover effect for moving the image and dark overlay */
+.detail-image:hover {
+  transform: translateY(-10px); /* Move the image slightly upwards on hover */
+}
+
+.detail-image:hover::before {
+  background-color: rgba(0, 0, 0, 0.4); /* Darker overlay when hovered */
+}
+
+/* Ensure the text stays above the overlay */
+.card-content {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the dark overlay */
+}
+
+/* slider section */
+/* Container for the slider */
+.Slide-section {
+  background-color: #333;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Slider wrapper */
+.slide-section {
+  width: 100%; /* Full width */
+  max-width: 500px; /* Set a max width to prevent it from becoming too wide */
+  padding: 0 15px; /* Optional padding for spacing */
+  display: flex;
+  justify-content: center;
+  position: relative; /* For positioning controls if needed */
+}
+
+/* Column for each slide card */
+.slide-card-col {
+  display: flex;
+  justify-content: center; /* Center the card horizontally in the column */
+  align-items: center; /* Center the card vertically in the column */
+}
+
+/* Individual slide card */
+.slide-card {
+  width: 480px; /* Make sure the card takes the full width of the column */
+  max-width: 450px; /* You can set a max width for the card */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside the card */
+.slide-image {
+  width: 450px;
+  height: 450px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Card content */
+.slide-card-content h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.slide-card-content p {
+  font-size: 1rem;
+  color: #555;
 }

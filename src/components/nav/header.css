@@ -1,0 +1,90 @@
+/* Ensure logo and text are aligned horizontally */
+.logo {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the items */
+    font-size: 24px; /* Adjust font size for mobile view */
+    margin-left: 22px;
+  }
+  
+  .logo img {
+    width: 40px; /* Adjust the size of the logo image */
+    height: 40px; /* Adjust the size of the logo image */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* This ensures the image covers the circular area */
+    margin-right: 10px; /* Add space between the logo image and the text */
+  }
+  
+  .logo p {
+    margin: 0; /* Remove any default margins from the <p> */
+    font-size: 24px; /* Adjust the font size of the "VitaWave" text */
+    font-weight: bold; /* Optionally make the text bold */
+  }
+  
+  
+  .nav-link {
+    font-size: 27px; /* Adjusted font size for better mobile display */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .nav-links-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px; /* Maintain the gap between links */
+  }
+  
+  .header {
+    height: 110px;
+    background-color: aliceblue;
+    padding: 10px; /* Added padding for better spacing on small screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .logo {
+    margin-left: 22px;
+    font-size: 24px; /* Adjust font size for mobile view */
+  }
+  
+  .sidebar {
+    display: none; /* Hide by default */
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links-container {
+        display: none; /* Hide the navigation links on smaller screens */
+    }
+  
+    .sidebar {
+        display: block; /* Show the sidebar (hamburger menu) on smaller screens */
+        font-size: 24px; /* Adjust font size for mobile view */
+        margin-right: 22px;
+    }
+  
+    .header {
+        padding: 0 20px; /* Add padding to the header for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .nav-link {
+        font-size: 18px; /* Further adjust font size for very small screens */
+        margin-left: 20px; /* Reduce margin for very small screens */
+        margin-right: 20px; /* Reduce margin for very small screens */
+    }
+  
+    .logo {
+        font-size: 10px; /* Further adjust font size for very small screens */
+    }
+    .logo img {
+      width: 40px; /* Adjust the size as needed */
+      height: 40px; /* Adjust the size as needed */
+      border-radius: 50%; /* This makes the image circular */
+      object-fit: cover; /* This ensures the image covers the circular area */
+    }
+  }
+  

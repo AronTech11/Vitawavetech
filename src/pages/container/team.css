@@ -1,0 +1,199 @@
+/* Content Styles */
+.team-content {
+  background-color: #000;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Background Video */
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.4; /* Darken the video further */
+  box-shadow: inset 0 0 50px rgba(11, 10, 10, 0.8); /* Apply a shadow to darken the edges */
+}
+
+
+/* Overlay for Text Contrast */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay for more contrast */
+  z-index: -1;
+}
+
+/* Heading for "Meet the Members" */
+.meet_team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.3rem;
+  padding: 30px;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Gradient Text Styles */
+.gradient-text {
+  text-transform: none;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #df48dd, #36ec1a 60%, #f6a479);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: block;
+  text-align: center;
+  font-family: 'SVN Poppins', sans-serif;
+  font-size: 75px;
+  font-weight: bold; /* Make text bold */
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-text:hover {
+  transform: translateY(-5px);
+  color: #ffffff;
+  /* No text shadow */
+}
+
+/* Info Section Styles */
+.team-info-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: slideIn 1s ease-out forwards;
+  padding: 0 5%;
+  z-index: 1;
+}
+
+.team-card-col {
+  padding: 15px;
+}
+
+/* Info Text Background and Layout */
+.info-text {
+  font-size: 1.5rem;
+  color: #090606;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  height: 450px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Image Styles */
+.team-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide-in Animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text Fade In Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .meet_team {
+    font-size: 2.5rem; /* Adjusted font size for smaller screens */
+  }
+
+  .gradient-text {
+    font-size: 2rem; /* Slightly smaller gradient text */
+  }
+
+  .team-info-section {
+    padding: 0 2%; /* Reduced padding for small screens */
+  }
+
+  .info-text {
+    font-size: 1.2rem; /* Adjust font size for readability */
+    height: auto; /* Allow content to adapt to screen size */
+  }
+
+  .team-image {
+    height: 300px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .meet_team {
+    font-size: 2rem; /* Further reduce text size */
+  }
+
+  .gradient-text {
+    font-size: 1.8rem; /* Even smaller text on very small screens */
+  }
+
+  .info-text {
+    font-size: 1rem; /* Further decrease font size */
+  }
+
+  .team-image {
+    height: 250px; /* Ensure images are responsive */
+  }
+}

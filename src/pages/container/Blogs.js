@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Card } from "antd";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import Platform from "../../assets/images/Env.png";
 import Kidneys from "../../assets/images/kidneys.jpg";
 import Minitor from "../../assets/images/ear-monitor.jpg";
@@ -23,112 +24,87 @@ const Blogs = () => {
 
       {/* Hero Section */}
       <h4 className="Blog-hero-heading">
-        <span className="Blog-gradient-text">Introducing eBP Blogs</span>
+        <span>News</span>
       </h4>
 
-      {/* Team Section */}
-      <Row justify="center" align="middle" className="Blog-article-section">
-        <Col xs={24} sm={24} md={8} lg={6} xl={6}>
+      {/* Blog Grid - Two rows of three columns */}
+      <Row gutter={[16, 16]} justify="center" className="Blog-article-section">
+        {/* First Row of Blog Posts */}
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
           <Card
             hoverable
-            cover={
-              <img alt="Platform" src={Platform} className="Blog-team-image" />
-            }
-          ></Card>
+            cover={<img alt="Platform" src={Platform} className="Blog-team-image" />}
+          >
+            <Meta title="Platform" />
+            <p className="Blog-info-text">
+              The description of the platform goes here. Short summary.{" "}
+              <Link to="/blog/1" className="Blog-read-more">Learn More</Link>
+            </p>
+          </Card>
         </Col>
-        <Col xs={24} sm={24} md={16} lg={15} xl={15}>
-          <p className="Blog-info-text">
-            The description can be just 3 sentences. I will give you the
-            write-up. Below the Description we can add "Learn More/Read
-            More".... and as we click the "Read More" tab that should lead us to
-            the Blog page with a detailed description about the device. I will
-            give a write-up for the blog with a detailed description as well.
-          </p>
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
+          <Card
+            hoverable
+            cover={<img alt="Kidneys" src={Kidneys} className="Blog-team-image" />}
+          >
+            <Meta title="Kidneys" />
+            <p className="Blog-info-text">
+              The description of the kidneys device goes here. Short summary.{" "}
+              <Link to="/blog/2" className="Blog-read-more">Learn More</Link>
+            </p>
+          </Card>
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
+          <Card
+            hoverable
+            cover={<img alt="HeartBeat" src={HeartBeat} className="Blog-team-image" />}
+          >
+            <Meta title="HeartBeat" />
+            <p className="Blog-info-text">
+              The description of the heartbeat monitor goes here. Short summary.{" "}
+              <Link to="/blog/3" className="Blog-read-more">Learn More</Link>
+            </p>
+          </Card>
         </Col>
       </Row>
 
-      <Row justify="center" align="middle" className="Blog-article-section">
-        <Col xs={24} sm={24} md={16} lg={15} xl={15}>
-          <p className="Blog-info-text">
-            The description can be just 3 sentences. I will give you the
-            write-up. Below the Description we can add "Learn More/Read
-            More".... and as we click the "Read More" tab that should lead us to
-            the Blog page with a detailed description about the device. I will
-            give a write-up for the blog with a detailed description as well.
-          </p>
-        </Col>
-        <Col xs={24} sm={24} md={8} lg={6} xl={6}>
+      <Row gutter={[16, 16]} justify="center" className="Blog-article-section">
+        {/* Second Row of Blog Posts */}
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
           <Card
             hoverable
-            cover={
-              <img alt="Kidneys" src={Kidneys} className="Blog-team-image" />
-            }
-          ></Card>
+            cover={<img alt="Minitor" src={Minitor} className="Blog-team-image" />}
+          >
+            <Meta title="Minitor" />
+            <p className="Blog-info-text">
+              The description of the ear monitor goes here. Short summary.{" "}
+              <Link to="/blog/4" className="Blog-read-more">Learn More</Link>
+            </p>
+          </Card>
         </Col>
-      </Row>
-
-      {/* Additional Team Members */}
-      <Row justify="center" align="middle" className="Blog-article-section">
-        <Col xs={24} sm={24} md={8} lg={6} xl={6}>
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
           <Card
             hoverable
-            cover={
-              <img
-                alt="HeartBeat"
-                src={HeartBeat}
-                className="Blog-team-image"
-              />
-            }
-          ></Card>
+            cover={<img alt="Device" src={Device} className="Blog-team-image" />}
+          >
+            <Meta title="Device" />
+            <p className="Blog-info-text">
+              The description of the blood pressure device goes here. Short summary.{" "}
+              <Link to="/blog/5" className="Blog-read-more">Learn More</Link>
+            </p>
+          </Card>
         </Col>
-        <Col xs={24} sm={24} md={16} lg={15} xl={15}>
-          <p className="Blog-info-text">
-            The description can be just 3 sentences. I will give you the
-            write-up. Below the Description we can add "Learn More/Read
-            More".... and as we click the "Read More" tab that should lead us to
-            the Blog page with a detailed description about the device. I will
-            give a write-up for the blog with a detailed description as well.
-          </p>
-        </Col>
-      </Row>
-
-      <Row justify="center" align="middle" className="Blog-article-section">
-        <Col xs={24} sm={24} md={16} lg={15} xl={15}>
-          <p className="Blog-info-text">
-            The description can be just 3 sentences. I will give you the
-            write-up. Below the Description we can add "Learn More/Read
-            More".... and as we click the "Read More" tab that should lead us to
-            the Blog page with a detailed description about the device. I will
-            give a write-up for the blog with a detailed description as well.
-          </p>
-        </Col>
-        <Col xs={24} sm={24} md={8} lg={6} xl={6}>
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
           <Card
             hoverable
-            cover={
-              <img alt="Minitor" src={Minitor} className="Blog-team-image" />
-            }
-          ></Card>
-        </Col>
-      </Row>
-
-      <Row justify="center" align="middle" className="Blog-article-section">
-        <Col xs={24} sm={24} md={8} lg={6} xl={6}>
-          <Card
-            hoverable
-            cover={
-              <img alt="Device" src={Device} className="Blog-team-image" />
-            }
-          ></Card>
-        </Col>
-        <Col xs={24} sm={24} md={16} lg={15} xl={15}>
-          <p className="Blog-info-text">
-            The description can be just 3 sentences. I will give you the
-            write-up. Below the Description we can add "Learn More/Read
-            More".... and as we click the "Read More" tab that should lead us to
-            the Blog page with a detailed description about the device. I will
-            give a write-up for the blog with a detailed description as well.
-          </p>
+            cover={<img alt="Device" src={Device} className="Blog-team-image" />}
+          >
+            <Meta title="Device" />
+            <p className="Blog-info-text">
+              The description of another device goes here. Short summary.{" "}
+              <Link to="/blog/6" className="Blog-read-more">Learn More</Link>
+            </p>
+          </Card>
         </Col>
       </Row>
     </main>

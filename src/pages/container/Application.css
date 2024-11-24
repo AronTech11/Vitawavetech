@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Prevent overflow of the video */
+    position: relative; /* Ensure the container is positioned correctly */
 }
 
 .app-hero-image-container video {

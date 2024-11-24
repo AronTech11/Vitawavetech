@@ -1,13 +1,14 @@
 import React from "react";
 import { Row, Col, Card } from "antd";
+import LinkedIn from "../../assets/images/download.png"
 import CEO from "../../assets/images/Jason.jpg";
 import CTO from "../../assets/images/hingba.jpg";
 import COFounder from "../../assets/images/nam.jpeg";
 import COFounder1 from "../../assets/images/robin1.png";
-import COFounder2 from "../../assets/images/Aron1.jpg";
+import Engineer from "../../assets/images/Aron.jpg";
 import Deepanshu from "../../assets/images/deep.png";
 import Thanmi from "../../assets/images/thanmi1.png";
-import April from "../../assets/images/moi2.png";
+import April from "../../assets/images/april.png";
 import BackGroundVideo from "../../assets/videos/world.mp4";
 // import BackGroundVideo1 from "../../assets/videos/video-2.mp4";
 
@@ -22,48 +23,49 @@ const teamMembers = [
     designation: "CEO",
     qualifications: "Stanford MBA",
     image: CEO,
+    social: "https://www.linkedin.com/in/jasonmcgowin/"
   },
   {
     name: "T Hingba",
     designation: "CTO, Co-Founder",
     qualifications: "MBA-MEng",
     image: CTO,
+    social: "https://www.linkedin.com/in/t-hingba" // LinkedIn link
   },
   {
     name: "Robin Deterding",
     designation: "Medical Advisor",
     qualifications: "MD",
     image: COFounder1,
+    social: "https://www.linkedin.com/in/robin-deterding-2979a056/"
   },
   {
     name: "Nam Bui",
     designation: "CSO - Technical Advisor",
     qualifications: "Professor",
     image: COFounder,
+    social: "https://www.linkedin.com/in/namnbui/"
   },
   {
     name: "Taluba Aron Hopson",
     designation: "Project Engineer",
     qualifications: "Msc",
-    image: COFounder2,
+    image: Engineer,
+    social: "https://www.linkedin.com/in/taluba-aron-hopson/"
   },
   {
     name: "Deepanshu Gupta",
     designation: "Data Scientist",
     qualifications: "Msc",
     image: Deepanshu,
-  },
-  {
-    name: "Thanmi Maram",
-    designation: "Support",
-    qualifications: "",
-    image: Thanmi,
+    social: "https://www.linkedin.com/in/deepanshu-gupta2805/"
   },
   {
     name: "April Yang",
-    designation: "Project Engineer",
-    qualifications: "",
+    designation: "Web Developer",
+    qualifications: "Bsc",
     image: April,
+    social: "https://www.linkedin.com/in/april-yang-185a5a1a7/"
   },
 ];
 
@@ -79,18 +81,11 @@ const Team = () => {
       <Row>
         <Col span={24}>
           <h4 className="meet_team">
-            <span className="gradient-text">Empowering Innovation Through Diverse Expertise</span>
+            <span className="gradient-text"></span>
           </h4>
           <h4 className="meet_team">
-            <span className="gradient-text">
-              VitaWave Tech is dedicated to developing and commercializing
-              innovative eBP technology for blood pressure monitoring
-            </span>
+            <span>Our Team</span>
           </h4>
-          <h4 className="meet_team">
-            <span className="gradient-text">Meet the Team Members</span>
-          </h4>
-          
         </Col>
       </Row>
 
@@ -120,6 +115,18 @@ const Team = () => {
                 title={member.name}
                 description={`${member.designation}, ${member.qualifications}`}
               />
+              <a
+                  href={member.social} // Use the custom social link for each member
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={LinkedIn} // LinkedIn image
+                    alt="LinkedIn"
+                    style={{width: "40px", height: "40px", marginTop: "15px", borderRadius: "50%",}}
+                  />
+                </a>
+
             </Card>
           </Col>
         ))}

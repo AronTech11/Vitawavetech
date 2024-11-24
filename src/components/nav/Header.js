@@ -24,7 +24,7 @@ const Header = () => {
     <>
       <Row align="middle" justify="space-between" className="header">
         <Col xs={18} sm={8} md={6} lg={4}>
-          <NavLink className="nav-link ripple" exact to="/" aria-current="page">
+          <NavLink className="nav-link-title ripple" exact to="/" aria-current="page">
             <div className="logo">
               <img src={Logo} alt="Logo" />
               <p>VitaWave</p>
@@ -41,17 +41,17 @@ const Header = () => {
             <NavLink className="nav-link ripple" exact to="/" aria-current="page">
               Home
             </NavLink>
-            <NavLink className="nav-link ripple" exact to="/team" aria-current="page">
-              The Team
-            </NavLink>
             <NavLink className="nav-link ripple" exact to="/application" aria-current="page">
               Application
             </NavLink>
+             <NavLink className="nav-link ripple" exact to="/team" aria-current="page">
+              Team
+            </NavLink>
             <NavLink className="nav-link ripple" exact to="/blogs" aria-current="page">
-              Blogs
+              News
             </NavLink>
             <NavLink className="nav-link ripple" exact to="/contact-us" aria-current="page">
-              Contact us
+              Contact
             </NavLink>
             
           </div>
@@ -75,8 +75,8 @@ const Header = () => {
         </NavLink>
       
       </Drawer>
-    </>
-  );
+      </>
+    );
 };
 
 export default Header;

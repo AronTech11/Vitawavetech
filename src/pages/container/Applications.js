@@ -61,14 +61,15 @@ const events = [
 const Application = () => {
   return (
     <Layout className="layout">
-      <Content style={{ padding: "0 50px" }}>
+      <Content style={{ }}>
         <div className="hero-section">
           <div className="app-hero-image-container">
             <video src={Video} autoPlay loop muted playsInline />
+            <h3>Coming Soon</h3>
           </div>
         </div>
         <div className="app-site-layout-content">
-          <Row gutter={[16, 16]}>
+         {/* <Row gutter={[16, 16]}>
             {events.map((event, index) => (
               <Col xs={24} sm={12} md={8} key={index}>
                 <Card
@@ -82,6 +83,7 @@ const Application = () => {
               </Col>
             ))}
           </Row>
+          */ }
         </div>
       </Content>
     </Layout>

@@ -4,21 +4,21 @@ import Slider from "react-slick"; // Import react-slick for slider
 import Video from "../../assets/videos/heartbeat.mp4";
 import BloodPressure from "../../assets/images/blood-pressure-logo.png";
 import Thetechnology from "../../assets/images/thetechnology.jpeg";
-import EarMonitor from "../../assets/images/ear-monitor.jpg";
-import Kidney from "../../assets/images/kidneys.jpg";
-import Detail from "../../assets/images/diagram.jpeg";
+import Kidneys from "../../assets/images/kidneys.jpg";
 import Vitals from "../../assets/images/stethoscope.svg";
 import High from "../../assets/images/clipboard.svg";
 import Cuff from "../../assets/images/heartbeat_wave3.svg";
 import Nurse from "../../assets/images/nurse.svg";
-import slide from "../../assets/images/Env.png";
-import slide1 from "../../assets/images/prototype.png";
-import slide2 from "../../assets/images/challenge.png";
-
+import conceptDrawing from "../../assets/images/concept_drawing.jpeg"
+import uniColoradoDenver from "../../assets/images/CU_Denver_logo.png";
+import uniColoradoBoulder from "../../assets/images/University_of_Colorado_Boulder_logo.png";
+import purdueUniv from "../../assets/images/Purdue-University-Logo.webp";
+import uniColoradoAnshutz from "../../assets/images/university of colorado anschutz.png";
 import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme CSS
 
 import "./home.css";
+
 
 const Home = () => {
 
@@ -52,43 +52,33 @@ const Home = () => {
 
   const SlideData = [
     {
-      image: slide,
-      alt: "Hypertension, Heart Failure, Kidney Failure",
-      title: "Vitals Diagnosis",
-      description: "Hypertension, Heart Failure, Kidney Failure",
+      image: uniColoradoDenver,
+      alt: "University of Colorado Denver",
+      title: "University of Colorado Denver",
     },
     {
-      image: slide1,
-      alt: "High patient count",
-      title: "Patient count",
-      description:
-        "High patient count: 47% Adults, 691K Deaths, $131B Annual Cost",
+      image: uniColoradoBoulder,
+      alt: "University of Colorado Boulder",
+      title: "University of Colorado Boulder",
     },
     {
-      image: slide2,
-      alt: "Management and Treatment",
-      title: "Management & Treatment",
-      description: "Early Detection, Reliable Reading, Consistent Monitoring",
+      image: purdueUniv,
+      alt: "Purdue University",
+      title: "Purdue University",
     },
     {
-      image: Cuff,
-      alt: "Cuff outdated",
-      title: "Cuff Outdated",
-      description: "Does Not Require Trained Professional",
+      image: uniColoradoAnshutz,
+      alt: "University of Colorado Anshutz",
+      title: "University of Colorado Anshutz",
     },
-    {
-      image: Cuff,
-      alt: "Cuff outdated",
-      title: "Cuff Outdated",
-      description: "Does Not Require Trained Professional",
-    },
+
   ];
 
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1, // Only one slide visible at a time
+    speed: 2000,
+    slidesToShow: 3, // Only one slide visible at a time
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1000, // Slide every 1 second (1000ms)
@@ -97,6 +87,7 @@ const Home = () => {
   };
 
   return (
+    <div>
     <main className="content">
       <Row>
         <Col span={24}>
@@ -104,14 +95,14 @@ const Home = () => {
             <div className="hero-image-container">
               {/* Added the text above the video */}
               <div className="hero-text">
-                <h1>A Novel Blood Pressure Monitoring Device</h1>
+                <h1>Developing A Novel Blood Pressure Monitoring Device</h1>
                 <p>
                   Wearable, Cuffless, Intermittent-Continuous, Ear-Based
                   Measurement
                 </p>
                 <p>
                   <a href="https://cacm.acm.org/research/ebp/" target="_blank">
-                  <strong>Published studies on ACM 2021</strong>
+                  Published studies on ACM 2021
                   </a>
                   .
                 </p>
@@ -124,22 +115,17 @@ const Home = () => {
 
       <Row justify="center" align="middle" className="info-section">
         <Col xs={24} sm={24} md={16} lg={15} xl={15} className="col-text">
-          <h3>The Technology Behind and its Application</h3>
+          <h3>Introducing In-ear Blood Pressure (eBP) Monitor</h3>
           <p>
-            Cuffless, Wearable, Intermittent-Continuous, Blood Pressure
-            Measurement Current BP measurement techniques involve cumbersome
-            devices with considerable user error potential that disrupt daily
-            activities, leading to infrequent monitoring and potential health
-            risks. We recognized the need for a more user-friendly, ambulatory
-            approach to BP assessment. Our eBP device is designed to make BP
-            monitoring accurate, ambulatory, and continuous while being easy to
-            use for non-clinicians and comfortable for patients. It features a
-            light-based pulse sensor that gently enters the ear canal, a digital
-            air pump for precise control, and a sophisticated BP estimation
-            algorithm. By gradually inflating the ear canal, our device provides
-            accurate systolic and diastolic BP values without obstructing blood
-            flow, thus minimizing user discomfort.
+          VitaWave’s eBP monitoring device represents a significant advancement in health technology, offering a cuffless, non-invasive solution for blood pressure measurement. 
+          Utilizing a light-based pulse sensor, this innovative device integrates into daily life, allowing for portable and wearable monitoring without the discomfort associated 
+          with traditional cuffs. Its advanced blood pressure estimation algorithm enables real-time data collection and analysis, empowering users to track their health effortlessly. 
           </p>
+          <button type="button" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href='/application';
+            }}>Learn More</button>  
         </Col>
 
         <Col xs={24} sm={24} md={8} lg={9} xl={9} className="image-col">
@@ -153,35 +139,31 @@ const Home = () => {
         </Col>
       </Row>
 
-      <Row justify="center" align="middle" className="info-section">
+      <Row justify="center" align="middle" className="info-section-contrast">
         <Col xs={24} sm={24} md={8} lg={9} xl={9} className="image-col">
           <div className="image-card">
-            <img src={EarMonitor} alt="Ear Monitor" className="hero-image" />
+          <img alt="concept_drawing" src={conceptDrawing} className="hero-image" />
           </div>
         </Col>
-        <Col xs={24} sm={24} md={16} lg={15} xl={15} className="col-text">
-          <h3>Renal Nephrology</h3>
+        <Col xs={24} sm={24} md={16} lg={15} xl={15} className="col-text-contrast">
+          <h3>About VitaWave</h3>
           <p>
-            Ambulatory BP monitoring is crucial for indicating kidney problems,
-            making it a significant application area. Chronic Kidney Disease
-            (CKD) affects 37 million Americans with over $120B spent on care
-            annually, demanding precise and frequent blood pressure monitoring
-            to indicate potential kidney problems. VitaWave's eBP technology,
-            with its cuffless design and continuous monitoring capabilities,
-            addresses this need with unparalleled accuracy and convenience. By
-            allowing patients to measure their blood pressure at least three
-            times per day, in alignment with NIH guidelines, our eBP device
-            empowers individuals managing CKD to proactively monitor their
-            health. The seamless integration of our device into daily life not
-            only enhances patient compliance but also provides healthcare
-            providers with crucial data for early intervention. The eBP device's
-            impact on Renal Nephrology extends beyond immediate patient care,
-            contributing to more effective management of kidney health and
-            reducing the overall burden on the healthcare system.
-          </p>
+          VitaWave focuses on empowering health with cuffless precision - monitor anytime, anywhere.
+          VitaWave is at the forefront of transforming blood pressure monitoring technology through innovative, cuffless solutions
+           prioritizing user comfort and accessibility. Our dedicated team is committed to convergent 
+           research that integrates engineering, medicine, data science, computer science, and artificial 
+           intelligence/machine learning to translate groundbreaking discoveries from the lab into practical 
+           applications for blood pressure management. By leveraging advanced technologies, we aim to deliver a 
+           portable and non-invasive monitoring device that empowers users to manage their cardiovascular health seamlessly and remotely.
+           </p>
+          <button type="button" class="button-contrast"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href='/team';
+            }}>Learn More</button>  
         </Col>
       </Row>
-
+ {/* 
       <Row justify="center" align="middle" className="info-section">
         <Col xs={24} sm={24} md={16} lg={15} xl={15} className="col-text">
           <h3>Hypertension</h3>
@@ -271,6 +253,7 @@ const Home = () => {
         </Col>
       </Row>
 
+
       <Row justify="center" align="middle" className="info-section">
         {infoData.map((item, index) => (
           <Col
@@ -292,8 +275,10 @@ const Home = () => {
           </Col>
         ))}
       </Row>
-
-      {/* <Row justify="center" align="middle" className="Slide-section">
+      */}
+      
+      <Row justify="center" align="middle" className="Slide-section">
+        <h2 className="slide-heading">Collaborators</h2>
         <Slider {...sliderSettings} className="slide-section">
           {SlideData.map((item, index) => (
             <Col
@@ -315,8 +300,19 @@ const Home = () => {
             </Col>
           ))}
         </Slider>
-      </Row> */}
+      </Row>
+
+      <Row justify="center" align="middle" className="info-section">
+          <div className="as-seen-in-content">
+            <h3 postion="center">As Seen In</h3>
+            <p>Embark</p>
+            <p>Innosphere Ventures</p>
+            <p>Boulder Startup Week</p>
+            <p>NVC CU Boulder</p>
+          </div>
+      </Row>
     </main>
+    </div>
   );
 };
 

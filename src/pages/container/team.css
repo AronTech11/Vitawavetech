@@ -15,8 +15,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
-  opacity: 0.4; /* Darken the video further */
+  z-index: -1; 
+  opacity: 0.3; /* Darken the video further */
   box-shadow: inset 0 0 50px rgba(11, 10, 10, 0.8); /* Apply a shadow to darken the edges */
 }
 
@@ -28,7 +28,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Darker overlay for more contrast */
+  background: rgba(0, 12, 27, 0.7); /* Dark blue with some transparency */
   z-index: -1;
 }
 
@@ -37,13 +37,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3.3rem;
+  font-size: 2.2rem; /* Slightly reduce font size for better readability */
   padding: 30px;
+  padding-top: 80px;
   color: white;
   z-index: 1;
   width: 100%;
   opacity: 0;
   animation: fadeInUp 2s ease-out forwards;
+
 }
 
 /* Gradient Text Styles */
@@ -80,7 +82,7 @@
 }
 
 .team-card-col {
-  padding: 15px;
+  padding: 25px;
 }
 
 /* Info Text Background and Layout */
@@ -104,7 +106,7 @@
 /* Image Styles */
 .team-image {
   width: 100%;
-  height: 450px;
+  height: 400px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { NavLink, useNavigate, useLocation } from "react-router-dom"; // Import useLocation hook
+import { NavLink } from "react-router-dom"; // Import useLocation hook
 import { Col, Row, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import "./header.css"; // Import the CSS file

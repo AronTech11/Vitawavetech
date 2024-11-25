@@ -1,7 +1,5 @@
 import React from "react";
 import { Row, Col } from "antd";
-import FacebookIcon from "../../assets/facebook.png";
-import InstaIcon from "../../assets/insta.avif";
 import "./footer.css";
 // import Logo from "../../assets/images/vitawave.png";
 import LinkedIn from "../../assets/images/download.png"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { NavLink } from "react-router-dom"; // Import useLocation hook
+import { NavLink } from "react-router-dom";
 import { Col, Row, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import "./header.css"; // Import the CSS file
@@ -10,15 +10,15 @@ import Logo from "../../assets/images/vitawave.png";
 const Header = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
 
+  // Function to show the drawer
   const showDrawer = () => {
     setDrawerVisible(true);
   };
 
+  // Function to hide the drawer
   const onClose = () => {
     setDrawerVisible(false);
   };
-
-
 
   return (
     <>
@@ -44,7 +44,7 @@ const Header = () => {
             <NavLink className="nav-link ripple" exact to="/application" aria-current="page">
               Application
             </NavLink>
-             <NavLink className="nav-link ripple" exact to="/team" aria-current="page">
+            <NavLink className="nav-link ripple" exact to="/team" aria-current="page">
               Team
             </NavLink>
             <NavLink className="nav-link ripple" exact to="/blogs" aria-current="page">
@@ -53,30 +53,34 @@ const Header = () => {
             <NavLink className="nav-link ripple" exact to="/contact-us" aria-current="page">
               Contact
             </NavLink>
-            
           </div>
         </Col>
       </Row>
-      <Drawer title="Menu" placement="right" onClose={onClose} visible={drawerVisible}>
+
+      <Drawer
+        title="Menu"
+        placement="right"
+        onClose={onClose}   // Ensure onClose is connected
+        visible={drawerVisible} // Control the drawer visibility
+      >
         <NavLink className="nav-link ripple" exact to="/" onClick={onClose} aria-current="page">
           Home
         </NavLink>
         <NavLink className="nav-link ripple" exact to="/team" onClick={onClose} aria-current="page">
-          The Team
+          Team
         </NavLink>
         <NavLink className="nav-link ripple" exact to="/application" onClick={onClose} aria-current="page">
           Application
         </NavLink>
         <NavLink className="nav-link ripple" exact to="/blogs" onClick={onClose} aria-current="page">
-          Blogs
+          News
         </NavLink>
         <NavLink className="nav-link ripple" exact to="/contact-us" onClick={onClose} aria-current="page">
           Contact us
         </NavLink>
-      
       </Drawer>
-      </>
-    );
+    </>
+  );
 };
 
 export default Header;

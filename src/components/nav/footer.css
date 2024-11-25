@@ -1,21 +1,39 @@
 .footer {
-  background-image: url('../../assets/images/fw.jpeg'); /* Background image */
-  background-size: 100% 100%;  /* Stretch the background image to cover the full width and height */
-  background-position: center center;  /* Ensure the image stays centered */
-  background-repeat: no-repeat;  /* Prevent the image from repeating */
+  background-image: url('../../assets/images/fw.jpeg');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #fff;
-  width: 100%; /* Full width */
+  width: 100%;
   padding: 50px 20px;
   text-align: center;
   height: 300px;
   font-family: "Poppins", sans-serif;
 }
 
+.footer h6 {
+  font-size: 14px;
+  color: #fff;
+}
 
-.footer .logo img {
-  width: 60px; /* Adjust the logo size */
+.footer .footer-logo {
+  text-align: left;
+}
+
+.footer .footer-logo img {
+  width: 60px;
   height: 50px;
   margin-bottom: 20px;
+}
+
+.footer h4, .footer h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.footer h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .footer h2 {
@@ -66,20 +84,77 @@
   opacity: 0;
 }
 
+/* Adjustments for all screen sizes */
+.footer .ant-row {
+  display: flex;
+  justify-content: space-between; /* Ensure columns stay horizontally aligned */
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.footer .ant-col {
+  text-align: center; /* Center the content inside each column */
+  padding: 0 10px; /* Add horizontal padding */
+}
+
+.footer .footer-logo {
+  text-align: left;
+}
+
+/* Adjustments for small screens */
 @media (max-width: 576px) {
   .footer {
-    padding: 30px 10px;
+    padding: 20px 10px;
+    height: auto; /* Allow dynamic height for smaller screens */
   }
 
   .footer h2 {
-    font-size: 20px;
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .footer h4 {
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .footer h6 {
+    font-size: 12px; /* Reduce font size */
   }
 
   .footer p {
-    font-size: 14px;
+    font-size: 12px; /* Reduce font size */
   }
 
   .social-icons {
     gap: 10px;
+  }
+
+  /* Ensure columns remain in one horizontal row even on small screens */
+  .footer .ant-row {
+    flex-wrap: nowrap; /* Prevent wrapping to new lines */
+    padding-bottom: 53px;
+  }
+
+  /* Adjust column widths to ensure they stay horizontal */
+  .footer .ant-col {
+    width: 33.33%; /* Set each column to take up 1/3 of the row width */
+  }
+
+  /* Reduce the logo size */
+  .footer .footer-logo img {
+    width: 35px; /* Reduce logo width */
+    height: 35px; /* Reduce logo height */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+  .footer-logo {
+    display: flex;
+  }
+
+  .footer h4 {
+    font-size: 14px; /* Reduce font size */
+    margin-bottom: 5px; /* Adjust margin */
+  }
+
+  .footer h6 {
+    font-size: 10px; /* Reduce font size */
   }
 }

@@ -1,17 +1,13 @@
 import React from "react";
-import { Row, Col, Card } from "antd";
-import { Link } from "react-router-dom"; // Import Link for navigation
-import Platform from "../../assets/images/Env.png";
-import Kidneys from "../../assets/images/kidneys.jpg";
-import Minitor from "../../assets/images/ear-monitor.jpg";
-import HeartBeat from "../../assets/images/challenge.png";
-import Device from "../../assets/images/blood-pressure-logo.png";
+import {  Card } from "antd";
+import NewsJson from "./News.json"; // Import your JSON data
 import BackGroundVideo from "../../assets/videos/world.mp4";
 import "./Blogs.css";
 
-const { Meta } = Card;
-
 const Blogs = () => {
+  // Assuming NewsJson is the JSON data you've given
+  const { announcement, grant_details, collaboration, project_details, healthcare_impact, references } = NewsJson;
+
   return (
     <main className="Blog-Application-content">
       {/* Background Video */}
@@ -24,89 +20,52 @@ const Blogs = () => {
 
       {/* Hero Section */}
       <h4 className="Blog-hero-heading">
-        <span>News</span>
+        <span>Project News</span>
       </h4>
 
-      {/* Blog Grid - Two rows of three columns */}
-      <Row gutter={[16, 16]} justify="center" className="Blog-article-section">
-        {/* First Row of Blog Posts */}
-        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-          <Card
-            hoverable
-            cover={<img alt="Platform" src={Platform} className="Blog-team-image" />}
-          >
-            <Meta title="Platform" />
-            <p className="Blog-info-text">
-              The description of the platform goes here. Short summary.{" "}
-              <Link to="/blog/1" className="Blog-read-more">Learn More</Link>
-            </p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-          <Card
-            hoverable
-            cover={<img alt="Kidneys" src={Kidneys} className="Blog-team-image" />}
-          >
-            <Meta title="Kidneys" />
-            <p className="Blog-info-text">
-              The description of the kidneys device goes here. Short summary.{" "}
-              <Link to="/blog/2" className="Blog-read-more">Learn More</Link>
-            </p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-          <Card
-            hoverable
-            cover={<img alt="HeartBeat" src={HeartBeat} className="Blog-team-image" />}
-          >
-            <Meta title="HeartBeat" />
-            <p className="Blog-info-text">
-              The description of the heartbeat monitor goes here. Short summary.{" "}
-              <Link to="/blog/3" className="Blog-read-more">Learn More</Link>
-            </p>
-          </Card>
-        </Col>
-      </Row>
+      {/* Card for Project Announcement */}
+      <Card title={announcement.title} className="News-card">
+       
+        <h4>{`Date: ${announcement.date} | Location: ${announcement.location}`}</h4>
+        <p>{announcement.title}</p>
+        <p><strong>Date:</strong> {announcement.date}</p>
+        <p><strong>Location:</strong> {announcement.location}</p>
+      </Card>
 
-      <Row gutter={[16, 16]} justify="center" className="Blog-article-section">
-        {/* Second Row of Blog Posts */}
-        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-          <Card
-            hoverable
-            cover={<img alt="Minitor" src={Minitor} className="Blog-team-image" />}
-          >
-            <Meta title="Minitor" />
-            <p className="Blog-info-text">
-              The description of the ear monitor goes here. Short summary.{" "}
-              <Link to="/blog/4" className="Blog-read-more">Learn More</Link>
-            </p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-          <Card
-            hoverable
-            cover={<img alt="Device" src={Device} className="Blog-team-image" />}
-          >
-            <Meta title="Device" />
-            <p className="Blog-info-text">
-              The description of the blood pressure device goes here. Short summary.{" "}
-              <Link to="/blog/5" className="Blog-read-more">Learn More</Link>
-            </p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-          <Card
-            hoverable
-            cover={<img alt="Device" src={Device} className="Blog-team-image" />}
-          >
-            <Meta title="Device" />
-            <p className="Blog-info-text">
-              The description of another device goes here. Short summary.{" "}
-              <Link to="/blog/6" className="Blog-read-more">Learn More</Link>
-            </p>
-          </Card>
-        </Col>
-      </Row>
+      {/* Card for Grant Details */}
+      <Card title="Grant Details" style={{ marginTop: '10px' }} className="News-card">
+        <p><strong>Grant Amount:</strong> ${grant_details.amount}</p>
+        <p><strong>Source:</strong> {grant_details.source}</p>
+        <p><strong>Purpose:</strong> {grant_details.purpose}</p>
+      </Card>
+
+      {/* Card for Collaboration */}
+      <Card title="Collaboration Details" style={{ marginTop: '10px' }} className="News-card">
+        <p><strong>Partner:</strong> {collaboration.partner}</p>
+        <p><strong>Principal Investigator:</strong> {collaboration.principal_investigator}</p>
+      </Card>
+
+      {/* Card for Project Focus */}
+      <Card title="Project Details" style={{ marginTop: '10px' }} className="News-card">
+        <p><strong>Focus:</strong> {project_details.focus}</p>
+        <p><strong>Goal:</strong> {project_details.goal}</p>
+        <p><strong>Target Area:</strong> {project_details.target_area}</p>
+      </Card>
+
+      {/* Card for Healthcare Impact */}
+      <Card title="Healthcare Impact" style={{ marginTop: '10px' }} className="News-card">
+        <p><strong>Significance:</strong> {healthcare_impact.significance}</p>
+        <p><strong>Integration:</strong> {healthcare_impact.integration}</p>
+      </Card>
+
+      {/* Card for References */}
+      <Card title="References" style={{ marginTop: '10px' }} className="News-card">
+        {references.map((reference, index) => (
+          <p key={index}>
+            <a href={reference.url} target="_blank" rel="noopener noreferrer">{reference.title}</a>
+          </p>
+        ))}
+      </Card>
     </main>
   );
 };

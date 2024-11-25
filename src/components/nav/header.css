@@ -1,125 +1,227 @@
-/* Ensure logo and text are aligned horizontally */
-.logo {
-  display: flex; /* Use flexbox to align items horizontally */
-  align-items: center; /* Vertically center the items */
-  font-size: 26px; /* Adjust font size for mobile view */
-  margin-left: 22px;
-}
-
-.logo img {
-  width: 40px; /* Adjust the size of the logo image */
-  height: 40px; /* Adjust the size of the logo image */
-  border-radius: 50%; /* This makes the image circular */
-  object-fit: cover; /* This ensures the image covers the circular area */
-  margin-right: 10px; /* Add space between the logo image and the text */
-}
-
-.logo p {
-  margin: 0; /* Remove any default margins from the <p> */
-  font-size: 24px; /* Adjust the font size of the "VitaWave" text */
-  font-weight: bold; /* Optionally make the text bold */
-}
-
-/* This affects the pages, Home, Application, Team, Contact, News */
-.nav-link {
-  font-size: 21px; /* Adjusted font size for better mobile display */
-  margin-left: 5px;
-  margin-right: 5px;
-  color: white;
-  text-decoration: none; /* No underline initially */
-  padding: 5px 0; /* Add some padding for better spacing */
-  border-bottom: 2px solid transparent; /* No visible border by default */
-  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for color and border */
-}
-
-.nav-link:hover {
-  color: white; /* Change text color on hover */
-  border-bottom: 2px solid white; /* White line underneath on hover */
-}
-
-.nav-link.active {
-  color: white; /* Highlight color for the active link */
-  border-bottom: 2px solid white; /* Optional: keep the underline effect active */
-}
-
-/* This affects the Vitawave title */
-.nav-link-title {
-  font-size: 21px; /* Adjusted font size for better mobile display */
-  margin-left: 5px;
-  margin-right: 5px;
-  color: white;
-  text-decoration: none; /* No underline initially */
-  padding: 5px 0; /* Add some padding for better spacing */
-  border-bottom: 2px solid transparent; /* No visible border by default */
-  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for color and border */
-}
-
-
-.nav-links-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 35px; /* Maintain the gap between links */
-  margin: 0 20px;
-}
-
+/* Default header styles for large screens (no changes needed here) */
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
-  background-color: transparent; /* Semi-transparent black */
+  background-color: transparent;
   z-index: 10;
-  padding: 15px 30px; /* Adjust padding for proper spacing */
+  padding: 15px 30px;
   display: flex;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   justify-content: space-between;
-  font-weight: 400;
-  font-style: normal;
   align-items: center;
-  
 }
 
+/* Ensure logo and text are aligned horizontally */
 .logo {
+  display: flex;
+  align-items: center; /* Vertically align logo and text */
+  font-size: 26px;
   margin-left: 22px;
-  font-size: 24px; /* Adjust font size for mobile view */
+}
+
+.logo img {
+  width: 40px; /* Adjust width of the logo image */
+  height: 40px; /* Adjust height of the logo image */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Adjust margin between logo and text */
+}
+
+.logo p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: white; /* Ensure text color is white */
+}
+
+
+/* Nav link styles (default for larger screens) */
+.nav-link-title {
+  font-size: 21px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 35px;
+  margin: 0 20px;
+}
+
+/* Show nav links on larger screens */
+.nav-link {
+  font-size: 21px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.nav-link.active {
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .sidebar {
-  display: none; /* Hide by default */
+  display: none;
 }
 
+/* Media Query for Small Screens (Mobile/Tablets) */
 @media (max-width: 768px) {
+  .logo {
+    font-size: 22px; /* Adjust logo size for small screens */
+    margin-left: 10px; /* Add a little margin on the left */
+    align-items: flex-start; /* Align logo with top (same line as the sidebar) */
+    margin-top: 10px; /* Add a little margin to the top for alignment */
+  }
+
+  .logo img {
+    width: 35px;
+    height: 35px; /* Adjust logo image size for smaller screens */
+  }
+
+  /* Hide the navigation links and show the drawer icon */
   .nav-links-container {
-      display: none; /* Hide the navigation links on smaller screens */
+    display: none;
   }
 
+  /* Display the hamburger menu icon */
   .sidebar {
-      display: block; /* Show the sidebar (hamburger menu) on smaller screens */
-      font-size: 24px; /* Adjust font size for mobile view */
-      margin-right: 22px;
+    display: block;
+    font-size: 26px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    position: absolute; /* Position icon to the top right */
+    top: 20px; /* Adjust top margin */
+    right: 20px; /* Adjust right margin */
   }
 
+  /* Position the header content closer to the left and right */
   .header {
-      padding: 0 20px; /* Add padding to the header for smaller screens */
+    padding: 0 20px;
+  }
+
+  /* Adjust drawer and nav link styles in the drawer */
+  .ant-drawer-body {
+    background-color: white !important;
+  }
+
+  .ant-drawer .ant-drawer-header {
+    background-color: white !important;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .ant-drawer .ant-drawer-content-wrapper {
+    background-color: white !important;
+  }
+
+  .ant-drawer .ant-drawer-content {
+    padding: 20px;
+  }
+
+  .ant-drawer .ant-drawer-close {
+    color: black;
+  }
+
+  .ant-drawer .nav-link {
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .ant-drawer .nav-link:hover {
+    color: #1890ff;
   }
 }
 
+/* Hide the VitaWave text on small screens */
+@media (max-width: 768px) {
+  .logo p {
+    display: none;
+  }
+}
+
+
+/* Additional Media Query for Very Small Screens (Small Phones) */
 @media (max-width: 576px) {
-  .nav-link {
-      font-size: 18px; /* Further adjust font size for very small screens */
-      margin-left: 20px; /* Reduce margin for very small screens */
-      margin-right: 20px; /* Reduce margin for very small screens */
+  .logo {
+    font-size: 18px; /* Smaller logo font size */
+    margin-left: -7px; /* Less margin for smaller screens */
+    align-items: flex-start; /* Align logo with top */
+    margin-top: -30px; /* Align with top margin */
   }
 
-  .logo {
-      font-size: 10px; /* Further adjust font size for very small screens */
-  }
   .logo img {
-    width: 40px; /* Adjust the size as needed */
-    height: 40px; /* Adjust the size as needed */
-    border-radius: 50%; /* This makes the image circular */
-    object-fit: cover; /* This ensures the image covers the circular area */
+    width: 30px;
+    height: 30px; /* Further reduce logo size */
   }
+
+  .nav-link {
+    font-size: 16px; /* Smaller nav link font size */
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* Adjust the drawer icon position and size for very small screens */
+  .sidebar {
+    font-size: 24px;
+    top: -7px; /* Adjust the top margin */
+    left: 60px; /* Adjust the right margin */
+  }
+}
+
+/* Custom styling for Drawer */
+.ant-drawer-body {
+  background-color: white !important;
+}
+
+.ant-drawer .ant-drawer-header {
+  background-color: white !important;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-drawer .ant-drawer-content-wrapper {
+  background-color: white !important;
+}
+
+.ant-drawer .ant-drawer-content {
+  padding: 20px;
+}
+
+.ant-drawer .ant-drawer-close {
+  color: black;
+}
+
+/* Styling for drawer links */
+.ant-drawer .nav-link {
+  font-size: 18px;
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.ant-drawer .nav-link:hover {
+  color: #1890ff;
 }

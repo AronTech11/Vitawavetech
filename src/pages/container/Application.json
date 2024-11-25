@@ -1,0 +1,163 @@
+{
+  "application": {
+    "problem": "Hypertension, often referred to as the 'silent killer', is a global health challenge affecting over 1.4 billion people, with projections reaching 1.6 billion by 2025. It is the most critical modifiable risk factor for cardiovascular diseases (CVD) and all-cause mortality.",
+    "impact": "Less than 15% of those affected have their hypertension adequately controlled, leading to severe long-term consequences such as heart disease, stroke, and renal failure. Lifestyle factors like high salt intake and sedentary behavior contribute to the rising prevalence, particularly in developing nations with limited awareness and treatment options.",
+    "burden": "The burden extends beyond individual health, straining healthcare systems. Approximately one-third of adults with hypertension remain untreated or inadequately managed, leading to increased healthcare costs and complications.",
+    "solution": {
+      "technology": "eBP (in-ear blood pressure monitor)",
+      "features": [
+        "Continuous, accurate, and user-friendly monitoring",
+        "Non-invasive and cuffless using advanced photoplethysmography (PPG) technology",
+        "Real-time monitoring without discomfort associated with traditional cuff-based methods",
+        "Seamless integration into daily routines"
+      ],
+      "benefits": [
+        "Detects fluctuations in blood pressure throughout the day",
+        "Identifies masked hypertension and abnormal blood pressure variability",
+        "Enhances patient compliance and engagement in health management",
+        "Improves blood pressure control by enabling frequent measurements and timely interventions"
+      ],
+      "impact": "By addressing the limitations of existing monitoring devices, the eBP empowers users to proactively manage their health, reducing the healthcare burden and improving outcomes."
+    }
+  },
+  "references": [
+    {
+      "author": "Aster Wakjira Garedow, Mekonnen Damessa Mamo, Gorfineh Teshome Tesfaye",
+      "title": "Medication Related-Problems and Associated Factors Among Patients with Hypertension at a Tertiary Care Hospital in Ethiopia: A Prospective Interventional Study",
+      "journal": "Integrated Blood Pressure Control",
+      "volume": "16",
+      "date": "November 30, 2023",
+      "doi": "https://doi.org/10.2147/IBPC.S434072"
+    },
+    {
+      "author": "Akram Al-Makki et al.",
+      "title": "Hypertension Pharmacological Treatment in Adults: A World Health Organization Guideline Executive Summary",
+      "journal": "Hypertension",
+      "volume": "79",
+      "issue": "1",
+      "date": "January 2022",
+      "doi": "https://doi.org/10.1161/HYPERTENSIONAHA.121.18192"
+    },
+    {
+      "author": "Ibrahim Sales and Yazed AlRuthia",
+      "title": "Arabic Translation and Cultural Adaptation of Hill-Bone Compliance to High Blood Pressure Therapy Scale",
+      "journal": "Saudi Pharmaceutical Journal",
+      "volume": "32",
+      "issue": "5",
+      "date": "May 1, 2024",
+      "doi": "https://doi.org/10.1016/j.jsps.2024.102053"
+    },
+    {
+      "author": "Azli Baharudin et al.",
+      "title": "Knowledge, Attitude and Behaviour on Salt Intake and Its Association with Hypertension in the Malaysian Population: Findings from MyCoSS (Malaysian Community Salt Survey)",
+      "journal": "Journal of Health, Population and Nutrition",
+      "volume": "40",
+      "issue": "1",
+      "date": "May 31, 2021",
+      "doi": "https://doi.org/10.1186/s41043-021-00235-0"
+    },
+    {
+      "author": "Anggun Permata Sari et al.",
+      "title": "The Maumere Exercise Therapy and Low Salt Diet in Hypertension Sufferers: An Effort to Lower Blood Pressure",
+      "journal": "Retos",
+      "volume": "56",
+      "date": "July 1, 2024",
+      "doi": "https://doi.org/10.47197/retos.v56.106718"
+    },
+    {
+      "author": "CADTH",
+      "title": "Renal Denervation for Uncontrolled Hypertension",
+      "journal": "Canadian Journal of Health Technologies",
+      "volume": "4",
+      "issue": "4",
+      "date": "April 8, 2024",
+      "doi": "https://doi.org/10.51731/cjht.2024.869"
+    },
+    {
+      "author": "eBP – Communications of the ACM",
+      "title": "eBP – Communications of the ACM",
+      "journal": "Communications of the ACM",
+      "date": "August 1, 2021",
+      "url": "https://cacm.acm.org/research/ebp/"
+    },
+    {
+      "author": "Nana Gogiberidze et al.",
+      "title": "Practical Application of a New Cuffless Blood Pressure Measurement Method",
+      "journal": "Pathophysiology",
+      "volume": "30",
+      "issue": "4",
+      "date": "December 2023",
+      "doi": "https://doi.org/10.3390/pathophysiology30040042"
+    },
+    {
+      "author": "Ramakrishna Mukkamala, George S. Stergiou, and Alberto P. Avolio",
+      "title": "Cuffless Blood Pressure Measurement",
+      "journal": "Annual Review of Biomedical Engineering",
+      "volume": "24",
+      "date": "June 6, 2022",
+      "doi": "https://doi.org/10.1146/annurev-bioeng-110220-014644"
+    },
+    {
+      "author": "Abu Baker Sheikh et al.",
+      "title": "Blood Pressure Variability in Clinical Practice: Past, Present and the Future",
+      "journal": "Journal of the American Heart Association",
+      "volume": "12",
+      "issue": "9",
+      "date": "May 2, 2023",
+      "doi": "https://doi.org/10.1161/JAHA.122.029297"
+    },
+    {
+      "author": "George S. Stergiou et al.",
+      "title": "Cuffless Blood Pressure Measuring Devices: Review and Statement by the European Society of Hypertension Working Group on Blood Pressure Monitoring and Cardiovascular Variability",
+      "journal": "Journal of Hypertension",
+      "volume": "40",
+      "issue": "8",
+      "date": "August 2022",
+      "doi": "https://doi.org/10.1097/HJH.0000000000003224"
+    },
+    {
+      "author": "Annina S. Vischer et al.",
+      "title": "Comparability of a Blood-Pressure-Monitoring Smartphone Application with Conventional Measurements—A Pilot Study",
+      "journal": "Diagnostics",
+      "volume": "12",
+      "issue": "3",
+      "date": "March 2022",
+      "doi": "https://doi.org/10.3390/diagnostics12030749"
+    },
+    {
+      "author": "Manish Hosanee et al.",
+      "title": "Cuffless Single-Site Photoplethysmography for Blood Pressure Monitoring",
+      "journal": "Journal of Clinical Medicine",
+      "volume": "9",
+      "issue": "3",
+      "date": "March 2020",
+      "doi": "https://doi.org/10.3390/jcm9030723"
+    },
+    {
+      "author": "Ching-Fu Wang et al.",
+      "title": "Upper-Arm Photoplethysmographic Sensor with One-Time Calibration for Long-Term Blood Pressure Monitoring",
+      "journal": "Biosensors",
+      "volume": "13",
+      "issue": "3",
+      "date": "March 2023",
+      "doi": "https://doi.org/10.3390/bios13030321"
+    },
+    {
+      "author": "Stergiou et al.",
+      "title": "Cuffless Blood Pressure Measuring Devices",
+      "journal": "Journal of Hypertension",
+      "volume": "40",
+      "issue": "8",
+      "date": "August 2022",
+      "doi": "https://doi.org/10.1097/HJH.0000000000003224"
+    },
+    {
+      "author": "Cheng-Yan Guo et al.",
+      "title": "Assessment of a Calibration-Free Method of Cuffless Blood Pressure Measurement: A Pilot Study",
+      "journal": "IEEE Journal of Translational Engineering in Health and Medicine",
+      "volume": "11",
+      "date": "2023",
+      "doi": "https://doi.org/10.1109/JTEHM.2022.3209754"
+    }
+  ]
+}

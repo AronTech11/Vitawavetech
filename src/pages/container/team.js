@@ -19,28 +19,28 @@ const { Meta } = Card;
 
 const teamMembers = [
   {
-    name: "Jason McGowin",
+    name: "Jason McGowin, Stanford MBA",
     designation: "CEO",
     qualifications: "Stanford MBA",
     image: CEO,
     social: "https://www.linkedin.com/in/jasonmcgowin/"
   },
   {
-    name: "T Hingba",
+    name: "T Hingba, MBA-MEng",
     designation: "CTO, Co-Founder",
     qualifications: "MBA-MEng",
     image: CTO,
     social: "https://www.linkedin.com/in/t-hingba" // LinkedIn link
   },
   {
-    name: "Robin Deterding",
+    name: "Robin Deterding, MD",
     designation: "Medical Advisor",
     qualifications: "MD",
     image: COFounder1,
     social: "https://www.linkedin.com/in/robin-deterding-2979a056/"
   },
   {
-    name: "Nam Bui",
+    name: "Nam Bui, Ph.D",
     designation: "CSO - Technical Advisor",
     qualifications: "Professor",
     image: COFounder,
@@ -61,8 +61,8 @@ const teamMembers = [
     social: "https://www.linkedin.com/in/deepanshu-gupta2805/"
   },
   {
-    name: "April Yang",
-    designation: "Web Developer",
+    name: "April Yang Maram",
+    designation:"Software Developer",
     qualifications: "Bsc",
     image: April,
     social: "https://www.linkedin.com/in/april-yang-185a5a1a7/"

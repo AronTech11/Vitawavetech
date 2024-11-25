@@ -1,4 +1,4 @@
-/* Ensure the overall background of the page is white */
+/* General Body and Page Styling */
 body {
   background-color: white;
   margin: 0;
@@ -6,14 +6,14 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll due to animations */
 }
 
-/* Hero Section with the video */
+/* Hero Section Styling */
 .hero-section {
   position: relative;
   width: 100%;
   height: 80vh; /* Adjust this height based on your design needs */
-  background-color: white; /* White background for the hero section */
+  background-color: white;
   overflow: hidden; /* Prevent overflow in smaller containers */
-  animation: slideInLeft 1s ease-out; /* Add the slide-in from left animation */
+  animation: slideInLeft 1s ease-out; /* Slide-in from left animation */
 }
 
 .hero-image-container {
@@ -30,227 +30,209 @@ body {
   height: 100%;
 }
 
-/* Keyframe for the slide-in from left */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%); /* Start off-screen to the left */
+/* Hero Text Styling */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.hero-text h1 {
+  font-size: 2rem; /* Reduced font size for small screens */
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.hero-text p strong {
+  font-weight: bold;
+}
+
+/* Hero Section Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 450px;
   }
-  to {
-    transform: translateX(0); /* End at normal position */
+
+  .hero-text {
+    font-size: 1.2rem;
+    top: 40%;
+  }
+
+  .hero-text p:first-of-type { /* Hide only the description paragraph on smaller screens */
+    display: none;
   }
 }
 
-/* Image Card Styling to ensure images are fully visible */
-.image-card {
+@media (max-width: 480px) {
+  .hero-section {
+    height: 210px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    top: 35%;
+  }
+
+  .hero-image-container video {
+    height: auto; /* Let the video adjust to its container */
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .hero-text p:first-of-type { /* Hide only the description paragraph on smaller screens */
+    display: none;
+  }
+}
+
+
+
+/* Hero Image Hover Effect */
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hero Section Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 450px;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    top: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 210px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    top: 35%;
+  }
+  .hero-image-container video {
+    height: auto; /* Let the video adjust to its container */
+  }
+}
+
+/* Slide-in Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Original Styles (For larger screens) */
+.info-section, .info-section-contrast {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 5%;
+  z-index: 1;
+  min-height: 200px;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.info-section {
+  background-color: white;
+}
+
+.info-section-contrast {
+  background-color: rgb(10, 5, 33);
+}
+
+.col-text, .col-text-contrast {
+  width: 50%;
+  font-size: 1.3rem;
+  padding: 80px 90px 20px 60px;
+  animation: slideInLeft 1s ease-out;
+}
+
+.col-text-contrast {
+  color: white;
+}
+
+/* Image Card Styling */
+.image-card, .detail-card {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevent image overflow */
-  animation: slideInRight 1s ease-out; /* Add the slide-in from right animation */
-}
-
-.detail-card {
-  
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Prevent image overflow */
-  animation: slideInRight 1s ease-out; /* Add the slide-in from right animation */
-}
-
-/* Keyframe for the slide-in from right */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%); /* Start off-screen to the right */
-  }
-  to {
-    transform: translateX(0); /* End at normal position */
-  }
-}
-
-.detail-image{
-  
-    width: 100%;            /* Ensure the image takes up full width */
-    height: 280px;           /* Maintain the aspect ratio of the image */
-    max-height: 350px;      /* Limit the height for better control */
-    border-radius: 15px;    /* Optional: adds rounded corners */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-  }
-
-
-.hero-image {
-  width: 100%;            /* Ensure the image takes up full width */
-  height: auto;           /* Maintain the aspect ratio of the image */
-  max-height: 350px;      /* Limit the height for better control */
-  object-fit: contain;    /* Ensure the full image is visible */
-  border-radius: 15px;    /* Optional: adds rounded corners */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for images */
-.hero-image:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Column text styles for better spacing
-padding: trbl (top, right, bottom, left) */
-.col-text {
-  width: 50%;
-  font-size: 1.3rem;
-  padding: 80px 90px 20px 60px;
-  animation: slideInLeft 1s ease-out; /* Add the slide-in from left animation */
-}
-
-/* Main info section styling */
-.info-section {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  animation: slideIn 1s ease-out forwards;
-  padding: 0 5%; /* Added padding to center the content */
-  z-index: 1;
-  padding-bottom: 20px;
-  padding-top: 15px;
-  min-height: 200px;
-  background-color: white; /* White background for info section */
-}
-
-/* Second, contrasting section */
-.info-section-contrast {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  animation: slideIn 1s ease-out forwards;
-  padding: 0 5%; /* Added padding to center the content */
-  z-index: 1;
-  padding-bottom: 20px;
-  padding-top: 15px;
-  min-height: 200px;
-  background-color: rgb(10, 5, 33); /* White background for info section */
-}
-
-/* Column text styles for better spacing
-padding: trbl (top, right, bottom, left) */
-.col-text-contrast {
-  color: white;
-  width: 50%;
-  font-size: 1.3rem;
-  padding: 80px 90px 20px 60px;
-  animation: slideInLeft 1s ease-out; /* Add the slide-in from left animation */
-}
-
-/* Image column styling to ensure proper display */
-.image-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  animation: slideInRight 1s ease-out; /* Add the slide-in from right animation */
-}
-
-/*Learn more buttons*/
-button {
-  background-color: rgb(10, 5, 33);; /* Dark blue */
-  color: white; /* White text */
-  border: 2px solid rgb(10, 5, 33);; /* Dark blue outline */
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-button:hover {
-  background-color: white; /* Light grey */
-  color: rgb(10, 5, 33);; /* Dark blue text */
-  border-color: rgb(10, 5, 33);; /* Keeps the original dark blue outline */
-}
-
-.button-contrast {
-  background-color: white; /* Dark blue */
-  color: #1e3a8a; /* White text */
-  border: 2px solid white; /* Dark blue outline */
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.button-contrast:hover {
-  background-color:rgb(10, 5, 33);; /* Light grey */
-  color: white; /* Dark blue text */
-  border-color: white; /* Keeps the original dark blue outline */
-}
-
-
-/* Adjust the height of the video and hero section for smaller screens */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 450px; /* Increase height for smaller screens */
-  }
-
-  .hero-image-container {
-    height: 100%;
-  }
-
-  .hero-image-container video {
-    height: 100%; /* Ensure the video takes up the full height */
-  }
-
-  .hero-text {
-    font-size: 1.2rem; /* Slightly reduce font size for better readability */
-    top: 40%; /* Adjust the text position to be slightly higher */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: 210px; /* Further increase the height for very small screens */
-  }
-
-  .hero-text {
-    font-size: 1rem; /* Further adjust font size for small screens */
-    top: 35%; /* Adjust the text position further */
-  }
-
-  .hero-image-container video {
-    height: auto; /* Let the video adjust to its container */
-  }
-}
-
-
-
-.info-card-col {
-  padding: 16px;
-}
-
-.detail-card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  animation: slideInRight 1s ease-out;
 }
 
+/* Detail Image Styling */
 .detail-image {
   width: 100%;
-  height: auto;
-  border-bottom: 1px solid #e0e0e0;
+  height: 280px;
+  max-height: 350px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Card Hover Effect */
+.detail-image:hover {
+  transform: translateY(-10px); /* Move the image slightly upwards on hover */
+}
+
+.detail-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.detail-image:hover::before {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .card-content {
+  position: relative;
+  z-index: 2;
   padding: 16px;
   text-align: center;
 }
@@ -266,137 +248,223 @@ button:hover {
   color: #666;
 }
 
-
-
-/* New styles for the added text above the video */
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+/* Button Styling */
+button {
+  background-color: rgb(10, 5, 33);
   color: white;
-  font-size: 1.5rem;
-  z-index: 10;
+  border: 2px solid rgb(10, 5, 33);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+button:hover {
+  background-color: white;
+  color: rgb(10, 5, 33);
+  border-color: rgb(10, 5, 33);
 }
 
-.hero-text p {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+.button-contrast {
+  /* background-color: white; */
+  color: #1e3a8a;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.cta-buttons {
-  margin-bottom: 1rem;
+.button-contrast:hover {
+  background-color: rgb(10, 5, 33);
+  color: white;
+  border-color: white;
 }
 
-.cta-buttons .ant-btn {
-  margin: 0 10px;
-}
-
-.hero-text p strong {
-  font-weight: bold;
-}
-
-/* Darken the image in the .detail-image */
-.detail-image {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #e0e0e0;
-  position: relative; /* Position it relative for the pseudo-element */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-/* Add a dark overlay to the image */
-.detail-image::before {
-  content: ''; /* Empty content for the pseudo-element */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
-  z-index: 1; /* Ensure the overlay is above the image but below the content */
-  transition: background-color 0.3s ease-in-out; /* Smooth transition for overlay */
-}
-
-/* Hover effect for moving the image and dark overlay */
-.detail-image:hover {
-  transform: translateY(-10px); /* Move the image slightly upwards on hover */
-}
-
-.detail-image:hover::before {
-  background-color: rgba(0, 0, 0, 0.4); /* Darker overlay when hovered */
-}
-
-/* Ensure the text stays above the overlay */
-.card-content {
-  position: relative;
-  z-index: 2; /* Ensure the text is above the dark overlay */
-}
-
-/* slider section */
-/* Container for the slider */
-.Slide-section {
-  background-color: white; /* Dark background color */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  min-height: 70vh; /* Full viewport height */
-}
-
-/* Slider wrapper */
-.slide-section {
-  width: 100%; /* Full width */
-  max-width: 1500px; /* Set a max width to prevent it from becoming too wide */
-  padding: 0 20px 0 200px; /* Optional padding for spacing */
-  display: flex;
-  justify-content: space-between; /* Space slides evenly */
-  align-items: center; /* Align slides vertically */
-  position: relative; /* For positioning controls if needed */
-  gap: 5px; /* Consistent spacing between slides */
-}
-
-.slide-heading{
-    color: black;
-    text-align: center; /* Optional: Center the text */
+/* Small Screen Adjustments */
+@media (max-width: 768px) {
+  /* Info Section and Text */
+  .col-text, .col-text-contrast {
+    width: 100%; /* Full width for smaller screens */
+    padding: 40px 20px; /* Adjust padding */
+    max-height: 450px; /* Set max height */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Apply ellipsis for text overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-/* Column for each slide card */
-.slide-card-col {
-  display: flex;
-  justify-content: center; /* Center the card horizontally in the column */
-  align-items: center; /* Center the card vertically in the column */
+  /* Add ellipsis effect for paragraphs in small screens */
+  .col-text p, .col-text-contrast p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Position the "Learn More" button at the bottom-right */
+  .col-text button, .col-text-contrast button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* Hide the button by default */
+/* Default (large screens) - black text */
+.button-contrast {
+  color: black;
 }
 
-/* Individual slide card */
+/* Small screen (max-width 768px) - white text */
+@media (max-width: 768px) {
+  .button-contrast {
+    color: rgb(5, 0, 0);
+  }
+}
+
+
+
+  /* Adjust image card */
+  .image-card {
+    max-height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  /* Hero Image Adjustments */
+  .hero-image {
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  /* Hero Text Adjustments */
+  .hero-text {
+    font-size: 1rem;
+    top: 35%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p:first-of-type {
+    display: none; /* Hide first paragraph on smaller screens */
+  }
+
+  .button-contrast {
+    padding: 8px 18px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Info Section Card - Adjustments for mobile screens */
+  .col-text, .col-text-contrast {
+    padding: 30px 15px; /* Adjust padding for mobile */
+    font-size: 1rem;
+    max-height: 450px;
+  }
+
+  /* Button Positioning for Small Screens - Link Style */
+.col-text button, .col-text-contrast button {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  background: transparent;  /* Make the button background transparent */
+  color: rgb(10, 5, 33);     /* Set the text color to match your theme (dark color) */
+  border: none;             /* Remove the border */
+  text-decoration: underline;  /* Underline the text like a link */
+  font-size: 14px;            /* Adjust font size */
+  padding: 0;                /* No padding since it's a link style */
+  cursor: pointer;          /* Ensure the cursor changes to a pointer */
+  transition: color 0.3s, text-decoration 0.3s; /* Add smooth transition for hover effect */
+}
+/* Hover Effect for Link-Style Button */
+.col-text button:hover, .col-text-contrast button:hover {
+  color: rgb(0, 50, 100);  /* Change color on hover (adjust to your theme) */
+  text-decoration: none;   /* Remove underline on hover */
+}
+
+  /* Image Card Adjustment for Mobile */
+  .image-card {
+    max-height: 400px;
+    width: 100%;
+    padding-top: 25px;
+  }
+
+  /* Hero Text Font Size for Mobile */
+  .hero-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Adjust button size for smaller screens */
+  .button-contrast {
+    padding: 7px 15px;
+  }
+}
+
+/* Slider Section (General) */
+.Slide-section {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.slide-section {
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 20px 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+}
+
+.slide-heading {
+  color: black;
+  text-align: center;
+}
+
+.slide-card-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .slide-card {
-  flex: 1; /* Allow flexible resizing */
-  width: 180%;
-  max-width: 480px; /* Ensure the card doesn't become too large */
+  flex: 1;
+  width: 200px;
+  height: 200px;
+  max-width: 480px;
   text-align: center;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: #fff; /* Add a background for better contrast */
-  margin: 10px; /* Space between slides if flex-gap isn't enough */
+  background: #fff;
+  margin: 10px;
 }
 
-/* Image inside the card */
 .slide-image {
-  width: 100%; /* Scale image to fit card width */
-  max-width: 450px; /* Limit the maximum size */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  max-width: 450px;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-/* Card content */
 .slide-card-content h3 {
   font-size: 1.5rem;
   margin: 10px 0;
@@ -407,39 +475,96 @@ button:hover {
   color: #555;
 }
 
-/* Slick specific adjustments (if using react-slick or similar libraries) */
 .slick-slide {
-  display: flex !important; /* Ensure slides are treated as flex items */
-  justify-content: center; /* Center individual slides */
+  display: flex !important;
+  justify-content: center;
   align-items: center;
 }
 
-/* Optional spacing for dots or arrows */
 .slick-dots {
-  bottom: -20px; /* Adjust dot position */
+  bottom: -20px;
 }
 
 .slick-prev, .slick-next {
-  z-index: 10; /* Ensure arrows are on top of content */
+  z-index: 10;
 }
 
-
+/* As Seen In Section */
 .as-seen-in-content {
   display: flex;
-  flex-direction: column; /* Aligns items vertically */
-  align-items: center; /* Centers the content horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .as-seen-in-content h3 {
-  margin-bottom: 20px; /* Adds space between the heading and the list */
+  margin-bottom: 20px;
 }
 
 .as-seen-in-content ul {
-  list-style: none; /* Removes default list styling */
-  padding: 0; /* Removes padding from the list */
-  padding-top: 10px; /* Removes margin from the list */
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
 }
 
 .as-seen-in-content li {
-  margin: 5px 0; /* Adds space between list items */
+  margin: 5px 0;
+}
+
+/* Ensure the slide section is centered on smaller screens */
+@media (max-width: 768px) {
+  .slide-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Ensure some padding on the sides */
+  }
+
+  .slide-card {
+    width: 100%; /* Make sure the card takes full width in the container */
+    max-width: 300px; /* Set a max-width for the image */
+    margin: 0 auto; /* Center the slide card */
+  }
+
+  .slide-image {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+  }
+
+  /* Optional: Adjust the slide heading font size for smaller screens */
+  .slide-heading {
+    font-size: 1.5rem;
+  }
+
+  /* Optional: Adjust the content padding */
+  .slide-card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .slide-card-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Further adjustments for very small screens (480px and below) */
+@media (max-width: 480px) {
+  .slide-section {
+    padding: 15px 10px; /* Further reduce padding on very small screens */
+  }
+
+  .slide-card {
+    max-width: 280px; /* Slightly smaller card size for mobile */
+    height: 200px;
+  }
+
+  .slide-heading {
+    font-size: 1.3rem; /* Smaller heading on mobile */
+  }
+
+  .slide-card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .slide-card-content p {
+    font-size: 0.9rem;
+  }
 }

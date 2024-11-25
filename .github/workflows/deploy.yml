@@ -1,4 +1,4 @@
-name: Deploy React App to Bluehost
+name: Deploy VitaWaveTech to Bluehost
 
 on:
   push:

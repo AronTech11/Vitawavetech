@@ -1,4 +1,4 @@
-name: Deploy VitaWaveTech to Bluehost
+name: Deploy VitaWave to Bluehost
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       # Step 4: Build the React app
-      - name: Build React app
+      - name: Build React app 
         run: npm run build
 
       # Step 5: Test SSH connection to Bluehost with verbose output

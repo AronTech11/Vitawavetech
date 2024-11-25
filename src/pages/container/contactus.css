@@ -1,82 +1,152 @@
 /* ======================== Contact US ======================== */
-.contact-form-container {
+.contact-container {
   padding-top: 100px; /* Increase this value for more space */
   padding: 50px;
   background-color: #020229;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping of content on smaller screens */
+  justify-content: center; /* Center content horizontally */
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-.contact-form-container .contact-text {
-  margin-top: 300px;
-  flex: 1;
+.contact-header {
+  margin-top: 50px;
+  flex: 1 1 100%; /* Make it take full width on smaller screens */
   padding-right: 20px;
-  text-align: left;
+  text-align: center; /* Center the header text */
 }
 
-.contact-form-container .contact-text h2 {
+.contact-header h2 {
   font-size: 36px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   color: white;
   margin-bottom: 20px;
-  margin-right: 50px;
 }
 
-.contact-form-container .contact-text p {
+.contact-header p {
   font-size: 18px;
-  color:white;
+  color: white;
   margin-bottom: 30px;
-  margin-right: 50px;
-
 }
-/*This affects the letter*/
-.contact-form-container .contact-form {
-  margin-top: 150px;
-  flex: 1;
-  max-width: 500px; /* Limit the width of the form */
+
+.contact-form {
+  margin-top: 50px;
+  flex: 1 1 100%; /* Make it take full width on smaller screens */
+  max-width: 600px; /* Limit the width of the form */
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.contact-form-container .contact-form .ant-input,
-.contact-form-container .contact-form .ant-btn-primary {
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group select,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 16px;
 }
 
-.contact-form-container .contact-form .ant-btn-primary {
+.contact-form .form-group textarea {
+  height: 150px; /* Adjust for message box */
+  resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
   background-color: #053246;
-  border-color: #053246;
   color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form-container .contact-form .ant-btn-primary:hover {
+.contact-form input[type="submit"]:hover {
   background-color: #024a92;
 }
 
 /* =========================== Responsive Layout ============================== */
 
 @media (max-width: 768px) {
-  .contact-form-container {
-    flex-direction: column; /* Stack the text and form on top of each other */
-    align-items: center;
+  /* Contact container */
+  .contact-container {
+    flex-direction: column; /* Stack header and form vertically */
+    padding: 20px;
   }
 
-  .contact-form-container .contact-text,
-  .contact-form-container .contact-form {
+  /* Contact header */
+  .contact-header {
+    text-align: center; /* Center the header text */
     flex: 1;
-    max-width: 100%;
     padding-right: 0;
+    margin-bottom: 30px;
   }
 
-  .contact-form-container .contact-form {
-    margin-top: 30px;
+  /* Contact form */
+  .contact-form {
+    margin-top: 20px;
+    max-width: 100%; /* Full width on small screens */
+  }
+
+  /* Form group labels and inputs */
+  .contact-form .form-group label {
+    font-size: 14px; /* Smaller label font size */
+  }
+
+  .contact-form .form-group input,
+  .contact-form .form-group select,
+  .contact-form .form-group textarea {
+    font-size: 14px; /* Smaller input font size */
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 16px; /* Slightly smaller submit button font */
+    padding: 10px; /* Reduced padding for smaller screens */
   }
 }
 
+@media (max-width: 480px) {
+  /* Adjust form elements even further for very small screens */
+  .contact-header h2 {
+    font-size: 28px; /* Smaller header size */
+  }
+
+  .contact-header p {
+    font-size: 16px; /* Smaller description text */
+  }
+
+  .contact-form .form-group label {
+    font-size: 12px; /* Very small label font for tiny screens */
+  }
+
+  .contact-form .form-group input,
+  .contact-form .form-group select,
+  .contact-form .form-group textarea {
+    font-size: 12px; /* Adjust input font size for very small screens */
+    padding: 8px; /* Reduced padding */
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 14px; /* Smaller submit button text */
+    padding: 8px; /* Reduced padding */
+  }
+}

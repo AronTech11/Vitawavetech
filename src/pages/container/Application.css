@@ -1,166 +1,173 @@
 /* General Layout */
 .layout {
-    min-height: 100vh;
-    background-color: #f0f2f5;
-    padding: 0;
-  }
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in element width/height */
+}
 
-  app-site-layout-content
-  
-  /* Hero Section Styling */
-  .app-hero-image-container {
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent overflow of the video */
-    position: relative; /* Ensure the container is positioned correctly */
-  }
-  
-  .app-hero-image-container video {
-    position: absolute; /* Position the video absolutely within the container */
-    top: 50%; /* Position the video at 50% from the top */
-    left: 50%; /* Position the video at 50% from the left */
-    transform: translate(-50%, -50%); /* Offset the video by 50% of its width and height to center it */
-    width: 100%; /* Make the video fill the container width */
-    height: 100%; /* Make the video fill the container height */
-    object-fit: cover; /* Ensure the video covers the container without distorting */
-    object-position: center; /* Center the video content */
-  }
-  
+
+/* Hero Section Styling */
+.app-hero-image-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent overflow of the video */
+  position: relative; /* Ensure the container is positioned correctly */
+}
+
+.app-hero-image-container video {
+  position: absolute; /* Position the video absolutely within the container */
+  top: 50%; /* Position the video at 50% from the top */
+  left: 50%; /* Position the video at 50% from the left */
+  transform: translate(-50%, -50%); /* Offset the video by 50% of its width and height to center it */
+  width: 100%; /* Make the video fill the container width */
+  height: 100%; /* Make the video fill the container height */
+  object-fit: cover; /* Ensure the video covers the container without distorting */
+  object-position: center; /* Center the video content */
+}
+
+.app-hero-image-container h3 {
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content Section Styling */
+.app-site-layout-content {
+  padding: 40px 20px;
+  background-color: #fff;
+  min-height: 280px;
+}
+
+.app-application-container {
+  width: 100%;
+}
+
+.app-application-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.app-application-heading {
+  font-size: 28px; /* Adjusted font size */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.app-application-list {
+  font-size: 20px; /* Adjusted font size */
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.app-application-paragraph {
+  font-size: 20px;
+  line-height: 1.6;
+  word-wrap: break-word; /* Ensure text doesn't overflow */
+}
+
+/* Cards */
+.app-application-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box; /* Ensure the card fits within the container */
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small and medium screens */
+@media (max-width: 768px) {
   .app-hero-image-container h3 {
-    position: absolute;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    z-index: 10;
-    text-align: center;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
   }
-  
-  /* Content Section Styling */
+
   .app-site-layout-content {
-    padding: 40px 20px;
-    background-color: #fff;
-    min-height: 280px;
+    padding: 24px 16px;
   }
-  
-  .app-application-container {
-    width: 100%;
-  }
-  
-  .app-application-title {
-    font-size: 40px;
-    font-weight: bold;
-    color: black; /* Make text color transparent so the gradient shows */
-    padding-bottom: 12px;
-    text-align: center;
 
+  .app-application-container .ant-col {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  
-  .app-application-heading {
-    font-size: 28px; /* Adjusted font size */
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .app-application-list {
-    font-size: 20px; /* Adjusted font size */
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .app-application-paragraph {
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  
+
   .app-application-card {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure cards are full width on smaller screens */
+    width: 100% !important;
+    box-sizing: border-box; /* Ensure cards are properly sized */
   }
-  
-  .ant-card {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Media Queries for Responsiveness */
-  
-  /* Small and medium screens */
-  @media (max-width: 768px) {
-    .app-hero-image-container h3 {
-      font-size: 2.5rem;
-    }
-  
-    .app-site-layout-content {
-      padding: 24px 16px;
-    }
-  
-    .app-application-container .ant-col {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  
-    .app-application-card {
-      width: 100% !important; /* Ensure cards are full width on smaller screens */
-    }
-  }
-  
-  /* Mobile screens */
-  @media (max-width: 576px) {
-    .app-hero-image-container h3 {
-      font-size: 1.8rem;
-    }
-  
-    .app-hero-image-container {
-      height: 200px;
-    }
-  
-    .app-site-layout-content {
-      padding: 16px;
-    }
-  
-    .app-application-list {
-      font-size: 20px; /* Adjust list item size for mobile */
-    }
-  
-    .app-application-heading {
-      font-size: 24px; /* Adjust heading font size for mobile */
-    }
-  
-    .app-application-title {
-      font-size: 28px; /* Smaller title size for mobile */
-    }
-  }
-  
-  /* Larger screens (from 1000px) */
-  @media (min-width: 1200px) {
-    .app-hero-image-container h3 {
-      font-size: 4rem;
-    }
-  
-    .app-site-layout-content {
-      padding: 60px 15px;
 
-      box-sizing: border-box;
-    }
-  
-    .app-application-container .ant-col {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  
-    .app-application-card {
-      max-width: 100%; /* Max width for larger screens (laptop/desktop) */
-      margin: 0 auto; /* Center the card */
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 20px;
-    }
+  .app-application-paragraph {
+    font-size: 18px; /* Adjust paragraph font size */
   }
-  
-  
-  
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+  .app-hero-image-container h3 {
+    font-size: 1.8rem;
+  }
+
+  .app-hero-image-container {
+    height: 200px; /* Make the hero image smaller on mobile */
+  }
+
+  .app-site-layout-content {
+    padding: 16px;
+  }
+
+  .app-application-list {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .app-application-heading {
+    font-size: 24px; /* Adjust heading font size for mobile */
+  }
+
+  .app-application-title {
+    font-size: 28px; /* Smaller title size for mobile */
+  }
+
+  .app-application-paragraph {
+    font-size: 16px; /* Make paragraph text smaller on mobile */
+  }
+}
+
+/* Larger screens (from 1000px) */
+@media (min-width: 1200px) {
+  .app-hero-image-container h3 {
+    font-size: 4rem;
+  }
+
+  .app-site-layout-content {
+    padding: 60px 15px;
+    box-sizing: border-box;
+  }
+
+  .app-application-container .ant-col {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .app-application-card {
+    max-width: 100%; /* Max width for larger screens (laptop/desktop) */
+    margin: 0 auto; /* Center the card */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+  }
+}

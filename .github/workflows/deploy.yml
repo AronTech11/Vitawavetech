@@ -1,4 +1,4 @@
-name: Deploy VitaWave to Bluehost
+name: Deploy VitaWavetech to Bluehost
 
 on:
   push:

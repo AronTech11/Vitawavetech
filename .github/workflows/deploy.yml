@@ -1,44 +1,56 @@
-name: Deploy VitaWavwTech to Bluehost
+name: Deploy React App to Bluehost
 
 on:
   push:
     branches:
-      - main  # Trigger on pushes to the 'main' branch
+      - main  # Change this to the branch you want to deploy from
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository code
-      - name: Checkout code
-        uses: actions/checkout@v3  # Update to v3
+    # Step 1: Checkout the repository code
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3  # Update to v3
-        with:
-          node-version: '16'
+    # Step 2: Set up Node.js (choose the correct version)
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Change this if you need a different version
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
+    # Step 3: Install project dependencies
+    - name: Install dependencies
+      run: npm install  # Use 'yarn install' if you're using Yarn
 
-      # Step 4: Build the React app
-      - name: Build React app
-        run: npm run build
+    # Step 4: Build the React app
+    - name: Build React app
+      run: npm run build  # Or use 'yarn build' if using Yarn
 
-      # Step 5: Deploy to Bluehost
-      - name: Deploy to Bluehost
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          touch ~/.ssh/known_hosts
-          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
-          rsync -avz --delete ./build/ $SSH_USER@$SSH_HOST:$REMOTE_PATH
+    # Step 5: Deploy to Bluehost using SSH and rsync
+    - name: Deploy to Bluehost
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Add SSH private key
+        SSH_USER: ${{ secrets.SSH_USER }}  # Add SSH username
+        SSH_HOST: ${{ secrets.SSH_HOST }}  # Add Bluehost SSH host/IP
+        REMOTE_PATH: ${{ secrets.REMOTE_PATH }}  # Add remote directory
+      run: |
+        # Step 5.1: Set up SSH
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+        # Step 5.2: Add Bluehost server to known hosts (prevents SSH warnings)
+        touch ~/.ssh/known_hosts
+        ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+
+        # Step 5.3: Deploy the build folder to Bluehost using rsync
+        rsync -avz --delete ./build/ $SSH_USER@$SSH_HOST:$REMOTE_PATH
+
+        # Step 5.4: Optional - Post-deployment actions (e.g., clearing cache or restarting a server)
+        # ssh $SSH_USER@$SSH_HOST "cd $REMOTE_PATH && some-deploy-script.sh"
+
+    # Optional: Notify deployment success
+    - name: Notify Deployment Success
+      run: echo "Deployment to Bluehost was successful!"

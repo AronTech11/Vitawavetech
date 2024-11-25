@@ -42,24 +42,17 @@ jobs:
           ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
           ssh -v -o StrictHostKeyChecking=no -T $SSH_USER@$SSH_HOST "echo 'SSH connection successful!'"
 
-      # Step 6: Deploy to Bluehost
-      # - name: Deploy to Bluehost
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     SSH_USER: ${{ secrets.SSH_USER }}
-      #     SSH_HOST: ${{ secrets.SSH_HOST }}
-      #     REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
-      #   run: |
-      #     mkdir -p ~/.ssh
-      #     echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-      #     chmod 600 ~/.ssh/id_rsa
-      #     touch ~/.ssh/known_hosts
-      #     ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
-      #     rsync -avz --delete ./build/ $SSH_USER@$SSH_HOST:$REMOTE_PATH
-
-      - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://git:${VGITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+      Step 6: Deploy to Bluehost
+      - name: Deploy to Bluehost
         env:
-          VGITHUB_TOKEN: ${{ secrets.VGITHUB_TOKEN }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          touch ~/.ssh/known_hosts
+          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+          rsync -avz --delete ./build/ $SSH_USER@$SSH_HOST:$REMOTE_PATH

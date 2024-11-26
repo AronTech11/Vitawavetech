@@ -1,5 +1,3 @@
-
-
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./contactus.css"; // Import the CSS file
@@ -13,10 +11,10 @@ export const ContactUs = () => {
   
     emailjs
       .sendForm(
-        "service_mw8foms", // Your service ID
-        "template_t5frmid", // Your template ID
+        "service_tfl7809", // Your service ID
+        "template_3zccgio", // Your template ID
         form.current, // Form reference
-        "nubQpAtdvRQ45NgzP" // Your user ID
+        "4M5jbpr0rJCYf7-95" // Your user ID
       )
       .then(
         (result) => {
@@ -50,16 +48,6 @@ export const ContactUs = () => {
               <label htmlFor="from_name">Email</label>
               <input type="email" name="from_name" id="from_name" />
             </div>
-            {/* <div className="form-group">
-              <label htmlfor="reason_for_email">Reason for Email</label>
-              <select placeholder="Please select an option" name="reason">
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Technology-Related">Technology-Related</option>
-                <option value="Funding">Funding</option>
-                <option value="Medical-Related">Medical-Related</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>  */}
             <div className="form-group">
               <label htmlFor="message">Message</label>
               <textarea name="message" id="message" />

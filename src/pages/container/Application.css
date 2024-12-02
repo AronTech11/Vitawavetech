@@ -76,6 +76,10 @@
   word-wrap: break-word; /* Ensure text doesn't overflow */
 }
 
+.app-application-reference {
+  font-size: 0.8rem;
+}
+
 /* Cards */
 .app-application-card {
   border-radius: 8px;

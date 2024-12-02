@@ -16,10 +16,27 @@ import purdueUniv from "../../assets/images/Purdue-University-Logo.webp";
 import uniColoradoAnshutz from "../../assets/images/university of colorado anschutz.png";
 import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme CSS
-
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 
+
+const MyComponent = () => {
+  const navigate = useNavigate();
+  return (
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        navigate("/team");
+      }}
+    >
+      Go to Team
+    </button>
+  );
+};
+
 const Home = () => {
+  const navigate = useNavigate();
+
   const SlideData = [
     {
       image: uniColoradoDenver,
@@ -103,7 +120,8 @@ const Home = () => {
               type="button"
               onClick={(e) => {
                 e.preventDefault();
-                window.location.href = "/application";
+                window.scrollTo(0, 0); 
+                navigate("/application");
               }}
             >
               Learn More
@@ -160,7 +178,8 @@ const Home = () => {
               style={{ color: "white" }}
               onClick={(e) => {
                 e.preventDefault();
-                window.location.href = "/team";
+                window.scrollTo(0, 0); // Scroll to the top
+                navigate("/team");
               }}
             >
               Learn More

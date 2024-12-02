@@ -21,49 +21,49 @@ const teamMembers = [
   {
     name: "Jason McGowin, Stanford MBA",
     designation: "CEO",
-    qualifications: "Stanford MBA",
+    qualifications: "Co-Founder",
     image: CEO,
     social: "https://www.linkedin.com/in/jasonmcgowin/"
   },
   {
     name: "T Hingba, MBA-MEng",
-    designation: "CTO, Co-Founder",
-    qualifications: "MBA-MEng",
+    designation: "CTO",
+    qualifications: "Co-Founder",
     image: CTO,
     social: "https://www.linkedin.com/in/t-hingba" // LinkedIn link
   },
   {
     name: "Robin Deterding, MD",
     designation: "Medical Advisor",
-    qualifications: "MD",
+    qualifications: "",
     image: COFounder1,
     social: "https://www.linkedin.com/in/robin-deterding-2979a056/"
   },
   {
     name: "Nam Bui, Ph.D",
-    designation: "CSO - Technical Advisor",
-    qualifications: "Professor",
+    designation: "CSO",
+    qualifications: "Technical Advisor",
     image: COFounder,
     social: "https://www.linkedin.com/in/namnbui/"
   },
   {
-    name: "Taluba Aron Hopson",
+    name: "Taluba Aron Hopson, MS",
     designation: "Project Engineer",
-    qualifications: "Msc",
+    qualifications: "",
     image: Engineer,
     social: "https://www.linkedin.com/in/taluba-aron-hopson/"
   },
   {
-    name: "Deepanshu Gupta",
+    name: "Deepanshu Gupta, MS",
     designation: "Data Scientist",
-    qualifications: "Msc",
+    qualifications: "",
     image: Deepanshu,
     social: "https://www.linkedin.com/in/deepanshu-gupta2805/"
   },
   {
     name: "April Yang Maram",
     designation:"Software Developer",
-    qualifications: "Bsc",
+    qualifications: "",
     image: April,
     social: "https://www.linkedin.com/in/april-yang-185a5a1a7/"
   },
@@ -113,7 +113,7 @@ const Team = () => {
             >
               <Meta
                 title={member.name}
-                description={`${member.designation}, ${member.qualifications}`}
+                description={`${member.designation} ${member.qualifications}`}
               />
               <a
                   href={member.social} // Use the custom social link for each member

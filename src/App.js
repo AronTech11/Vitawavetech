@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import Home from "./pages/container/Home";
 import Team from "./pages/container/team";
 import ContactUs from "./pages/container/contactus";
+import News from './pages/container/news'
 // import Login from "./pages/Login"; // I will keep this route in case you want a login page in the future
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,7 +24,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/blogs" element={<Blogs />} /> 
+        <Route path="/news" element={<News />} /> 
+        <Route path="/blogs/:id" element={<Blogs />} /> 
         <Route path="/application" element={<Application />} /> 
 
       </Routes>

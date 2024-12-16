@@ -1,0 +1,280 @@
+/* Background Video Styling */
+.News-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+.News-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Hero Section */
+.News-hero-heading {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* News Application Styles */
+.News-Application-content {
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: 1;
+    padding: 150px 20px;
+  }
+  
+  .News-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  .News-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 12, 27, 0.7);
+    z-index: -1;
+  }
+  .news-link {
+    text-decoration: none;
+  }
+  
+  .news-link:hover {
+    text-decoration: none; /* Ensures underline doesn't appear on hover */
+  }
+  
+  .News-hero-heading {
+    padding: 0 20px 20px 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .News-article-section {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  /* Increase font size of all <p> tags inside .News-Application-content */
+  .News-Application-content p {
+    color: #333;
+  }
+  
+  /* Increase the font size of the Card title */
+  .ant-card-head-title {
+    font-size: 28px; /* Set the font size to 28px */
+    font-weight: bold; /* Optional: Make the title bold */
+  }
+  
+  .News-Application-content strong {
+    color: #333;
+  }
+  
+  .news-title-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 12px 25px 70px 25px;
+    max-width: 800px;
+  }
+  
+  .News-card {
+    padding: 12px 35px 10px 35px;
+  }
+  
+  .news-text p {
+    font-size: 1.2rem;
+    padding-top: 20px;
+  }
+  
+  .news-reference p {
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .News-hero-heading {
+      font-size: 2.0rem;
+    }
+    .News-Application-content p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .News-hero-heading {
+      font-size: 2rem;
+    }
+    .News-Application-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Adjust the image width on smaller screens */
+  @media (max-width: 768px) {
+    .news-title-image {
+      width: 70%; /* Increase width for medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .news-title-image {
+      width: 90%; /* Further increase width for smaller screens */
+    }
+  }
+  
+
+/* Card container layout */
+.card-container {
+    margin-top: 30px;
+    padding: 0 16px;
+}
+
+.card-container .ant-col {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-container .ant-card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 20px; /* Ensure enough space at the bottom */
+    height: auto; /* Allow content to expand naturally */
+}
+
+.card-container .ant-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Card Content */
+.card-container .ant-card .ant-card-meta {
+    padding: 0 16px; /* Adjust padding */
+}
+
+.card-container .ant-card .ant-card-meta-title,
+.card-container .ant-card .ant-card-meta-description {
+    white-space: normal;  /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if needed */
+    overflow: hidden;     /* Prevent overflow */
+    padding: 10px 0; /* Add padding to space out content */
+}
+
+/* Image inside the card */
+.card-container .ant-card img {
+    height: 200px; /* Adjust the image height */
+    padding: 20px;  /* Adjust padding */
+    object-fit: contain; /* Ensure the image scales properly */
+}
+
+/* News Content Section */
+.News-content {
+    padding: 0 16px;
+    color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.News-content p {
+    line-height: 1.6;
+}
+
+.News-date {
+    color: #aaa;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* References Section */
+.News-references {
+    color: #fff;
+}
+
+.News-references ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.News-references a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.News-references a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 768px) {
+    .News-hero-heading {
+        font-size: 1.5rem;
+    }
+
+    .card-container .ant-col {
+        margin-bottom: 16px;
+    }
+
+    .card-container .ant-card .ant-card-meta-title,
+    .card-container .ant-card .ant-card-meta-description {
+        font-size: 1rem; /* Adjust text size on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .News-hero-heading {
+        font-size: 1.2rem;
+    }
+
+    .card-container .ant-card {
+        padding: 10px; /* Add some padding inside the card */
+    }
+
+    .card-container .ant-card img {
+        height: 150px; /* Adjust the image size on very small screens */
+    }
+
+    .card-container .ant-card .ant-card-meta-title,
+    .card-container .ant-card .ant-card-meta-description {
+        font-size: 0.9rem; /* Adjust text size for better readability */
+    }
+}
+
+/* Title Style */
+.title {
+    color: var(--e-global-color-1c73ce4);
+    font-family: "Montserrat", Sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: -0.13px;
+}

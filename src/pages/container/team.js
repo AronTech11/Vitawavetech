@@ -7,7 +7,6 @@ import COFounder from "../../assets/images/nam.jpeg";
 import COFounder1 from "../../assets/images/robin1.png";
 import Engineer from "../../assets/images/Aron.jpg";
 import Deepanshu from "../../assets/images/deep.png";
-import Thanmi from "../../assets/images/thanmi1.png";
 import April from "../../assets/images/april.png";
 import BackGroundVideo from "../../assets/videos/world.mp4";
 // import BackGroundVideo1 from "../../assets/videos/video-2.mp4";
@@ -73,7 +72,7 @@ const Team = () => {
   return (
     <main className="team-content">
       {/* Background Video */}
-      <video autoPlay muted loop className="background-video">
+      <video autoPlay muted loop playsInline className="background-video">
         <source src={BackGroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

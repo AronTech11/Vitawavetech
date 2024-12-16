@@ -105,3 +105,17 @@
     font-size: 1rem;
   }
 }
+
+
+/* Adjust the image width on smaller screens */
+@media (max-width: 768px) {
+  .blog-title-image {
+    width: 70%; /* Increase width for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-title-image {
+    width: 90%; /* Further increase width for smaller screens */
+  }
+}

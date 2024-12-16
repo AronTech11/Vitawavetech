@@ -7,6 +7,7 @@
   flex-wrap: wrap; /* Allow wrapping of content on smaller screens */
   justify-content: center; /* Center content horizontally */
   align-items: flex-start;
+  width: 100%; /* Ensure container takes full width */
 }
 
 .contact-header {
@@ -34,6 +35,7 @@
   margin-top: 50px;
   flex: 1 1 100%; /* Make it take full width on smaller screens */
   max-width: 600px; /* Limit the width of the form */
+  width: 100%; /* Ensure it takes full width */
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
@@ -86,27 +88,26 @@
 /* =========================== Responsive Layout ============================== */
 
 @media (max-width: 768px) {
-  /* Contact container */
   .contact-container {
     flex-direction: column; /* Stack header and form vertically */
-    padding: 20px;
+    padding: 20px; /* Reduce padding */
+    width: 100%; /* Ensure container takes full width */
   }
 
-  /* Contact header */
   .contact-header {
-    text-align: center; /* Center the header text */
+    text-align: center;
     flex: 1;
     padding-right: 0;
     margin-bottom: 30px;
   }
 
-  /* Contact form */
   .contact-form {
     margin-top: 20px;
     max-width: 100%; /* Full width on small screens */
+    width: 100%; /* Full width */
+    padding: 20px; /* Reduced padding for smaller screens */
   }
 
-  /* Form group labels and inputs */
   .contact-form .form-group label {
     font-size: 14px; /* Smaller label font size */
   }
@@ -125,7 +126,6 @@
 }
 
 @media (max-width: 480px) {
-  /* Adjust form elements even further for very small screens */
   .contact-header h2 {
     font-size: 28px; /* Smaller header size */
   }

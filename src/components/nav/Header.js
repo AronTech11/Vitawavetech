@@ -47,7 +47,7 @@ const Header = () => {
             <NavLink className="nav-link ripple" exact to="/team" aria-current="page">
               Team
             </NavLink>
-            <NavLink className="nav-link ripple" exact to="/blogs" aria-current="page">
+            <NavLink className="nav-link ripple" exact to="/news" aria-current="page">
               News
             </NavLink>
             <NavLink className="nav-link ripple" exact to="/contact-us" aria-current="page">
@@ -72,7 +72,7 @@ const Header = () => {
         <NavLink className="nav-link ripple" exact to="/application" onClick={onClose} aria-current="page">
           Application
         </NavLink>
-        <NavLink className="nav-link ripple" exact to="/blogs" onClick={onClose} aria-current="page">
+        <NavLink className="nav-link ripple" exact to="/news" onClick={onClose} aria-current="page">
           News
         </NavLink>
         <NavLink className="nav-link ripple" exact to="/contact-us" onClick={onClose} aria-current="page">

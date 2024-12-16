@@ -2,13 +2,8 @@ import React from "react";
 import { Row, Col } from "antd";
 import Slider from "react-slick"; // Import react-slick for slider
 import Video from "../../assets/videos/heartbeat.mp4";
-import BloodPressure from "../../assets/images/blood-pressure-logo.png";
+
 import Thetechnology from "../../assets/images/thetechnology.jpeg";
-import Kidneys from "../../assets/images/kidneys.jpg";
-import Vitals from "../../assets/images/stethoscope.svg";
-import High from "../../assets/images/clipboard.svg";
-import Cuff from "../../assets/images/heartbeat_wave3.svg";
-import Nurse from "../../assets/images/nurse.svg";
 import conceptDrawing from "../../assets/images/concept_drawing.jpeg";
 import uniColoradoDenver from "../../assets/images/CU_Denver_logo.png";
 import uniColoradoBoulder from "../../assets/images/University_of_Colorado_Boulder_logo.png";
@@ -19,20 +14,6 @@ import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme CSS
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 
-
-const MyComponent = () => {
-  const navigate = useNavigate();
-  return (
-    <button
-      onClick={(e) => {
-        e.preventDefault();
-        navigate("/team");
-      }}
-    >
-      Go to Team
-    </button>
-  );
-};
 
 const Home = () => {
   const navigate = useNavigate();
@@ -96,7 +77,7 @@ const Home = () => {
                     .
                   </p>
                 </div>
-                <video src={Video} autoPlay loop muted />
+                <video src={Video} autoPlay loop muted playsInline />
               </div>
             </div>
           </Col>

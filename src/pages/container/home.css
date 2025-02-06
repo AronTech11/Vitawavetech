@@ -6,6 +6,13 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll due to animations */
 }
 
+.coll-text{
+  font-size: 2.2rem;
+  padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
 /* Hero Section Styling */
 .hero-section {
   position: relative;
@@ -95,8 +102,6 @@ body {
   }
 }
 
-
-
 /* Hero Image Hover Effect */
 .hero-image {
   width: 100%;
@@ -109,32 +114,6 @@ body {
 
 .hero-image:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Hero Section Responsiveness */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 450px;
-  }
-
-  .hero-text {
-    font-size: 1.2rem;
-    top: 40%;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: 210px;
-  }
-
-  .hero-text {
-    font-size: 1rem;
-    top: 35%;
-  }
-  .hero-image-container video {
-    height: auto; /* Let the video adjust to its container */
-  }
 }
 
 /* Slide-in Animations */
@@ -156,7 +135,7 @@ body {
   }
 }
 
-/* Original Styles (For larger screens) */
+/* Info Section and Contrast Styles */
 .info-section, .info-section-contrast {
   margin-top: 20px;
   display: flex;
@@ -187,6 +166,17 @@ body {
 .col-text-contrast {
   color: white;
 }
+
+.image-card-seen {
+  width: 100%;                     /* Make the image fill the full width of the container */
+  height: 150px;                   /* Fixed height for the image */
+  background-image: url('../../assets/images/boulder.png');  /* Background image */
+  background-size: cover;         /* Ensure the image covers the entire container */
+  background-position: center;    /* Center the image */
+  border-radius: 10px;             /* Adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
 
 /* Image Card Styling */
 .image-card, .detail-card {
@@ -267,7 +257,6 @@ button:hover {
 }
 
 .button-contrast {
-  /* background-color: white; */
   color: #1e3a8a;
   border: 2px solid white;
   padding: 10px 20px;
@@ -291,7 +280,7 @@ button:hover {
     padding: 40px 20px; /* Adjust padding */
     max-height: 450px; /* Set max height */
     overflow: hidden; /* Prevent overflow */
-    text-overflow: ellipsis; /* Apply ellipsis for text overflow */
+    text-overflow: ellipsis; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -311,20 +300,9 @@ button:hover {
     right: 10px;
   }
 
-  /* Hide the button by default */
-/* Default (large screens) - black text */
-.button-contrast {
-  color: black;
-}
-
-/* Small screen (max-width 768px) - white text */
-@media (max-width: 768px) {
   .button-contrast {
-    color: rgb(5, 0, 0);
+    padding: 8px 18px; /* Adjust padding */
   }
-}
-
-
 
   /* Adjust image card */
   .image-card {
@@ -356,10 +334,6 @@ button:hover {
   .hero-text p:first-of-type {
     display: none; /* Hide first paragraph on smaller screens */
   }
-
-  .button-contrast {
-    padding: 8px 18px; /* Adjust padding */
-  }
 }
 
 @media (max-width: 480px) {
@@ -371,24 +345,25 @@ button:hover {
   }
 
   /* Button Positioning for Small Screens - Link Style */
-.col-text button, .col-text-contrast button {
-  position: absolute;
-  bottom: 7px;
-  right: 10px;
-  background: transparent;  /* Make the button background transparent */
-  color: rgb(10, 5, 33);     /* Set the text color to match your theme (dark color) */
-  border: none;             /* Remove the border */
-  text-decoration: underline;  /* Underline the text like a link */
-  font-size: 14px;            /* Adjust font size */
-  padding: 0;                /* No padding since it's a link style */
-  cursor: pointer;          /* Ensure the cursor changes to a pointer */
-  transition: color 0.3s, text-decoration 0.3s; /* Add smooth transition for hover effect */
-}
-/* Hover Effect for Link-Style Button */
-.col-text button:hover, .col-text-contrast button:hover {
-  color: rgb(0, 50, 100);  /* Change color on hover (adjust to your theme) */
-  text-decoration: none;   /* Remove underline on hover */
-}
+  .col-text button, .col-text-contrast button {
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
+    background: transparent;  /* Make the button background transparent */
+    color: rgb(10, 5, 33);     /* Set the text color to match your theme (dark color) */
+    border: none;             /* Remove the border */
+    text-decoration: underline;  /* Underline the text like a link */
+    font-size: 14px;            /* Adjust font size */
+    padding: 0;                /* No padding since it's a link style */
+    cursor: pointer;          /* Ensure the cursor changes to a pointer */
+    transition: color 0.3s, text-decoration 0.3s; /* Add smooth transition for hover effect */
+  }
+
+  /* Hover Effect for Link-Style Button */
+  .col-text button:hover, .col-text-contrast button:hover {
+    color: rgb(0, 50, 100);  /* Change color on hover (adjust to your theme) */
+    text-decoration: none;   /* Remove underline on hover */
+  }
 
   /* Image Card Adjustment for Mobile */
   .image-card {
@@ -400,6 +375,11 @@ button:hover {
   /* Hero Text Font Size for Mobile */
   .hero-text h1 {
     font-size: 1.3rem;
+  }
+
+  .coll-text{
+    font-size: 2rem;
+    padding: 25px;
   }
 
   .hero-text p {
@@ -549,6 +529,11 @@ button:hover {
 @media (max-width: 480px) {
   .slide-section {
     padding: 15px 10px; /* Further reduce padding on very small screens */
+  }
+
+  .hero-text h1 {
+    font-size: 1rem;
+    padding-top: 60px;
   }
 
   .slide-card {

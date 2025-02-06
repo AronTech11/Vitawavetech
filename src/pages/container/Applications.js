@@ -96,61 +96,7 @@ const Application = () => {
                         valuable tool for individuals interested in maintaining
                         overall wellness. By providing insights into daily blood
                       </p>
-                      <div class="app-application-reference">
-                        <h1>Reference</h1>
-                        <p>
-                          <sup>i</sup>Aster Wakjira Garedow, Mekonnen Damessa
-                          Mamo, and Gorfineh Teshome Tesfaye, “Medication
-                          Related-Problems and Associated Factors Among Patients
-                          with Hypertension at a Tertiary Care Hospital in
-                          Ethiopia: A Prospective Interventional Study,”
-                          <em>Integrated Blood Pressure Control</em> 16
-                          (November 30, 2023): 123–36,{" "}
-                          <a href="https://doi.org/10.2147/IBPC.S434072">
-                            https://doi.org/10.1161/HYPERTENSIONAHA.120.14591
-                          </a>
-                          .<br></br>
-                          <sup>ii</sup>Akram Al-Makki et al., “Hypertension
-                          Pharmacological Treatment in Adults: A World Health
-                          Organization Guideline Executive Summary,”{" "}
-                          <em>Hypertension</em> 79, no. 1 (January 2022):
-                          293–301,{" "}
-                          <a href="https://doi.org/10.1161/HYPERTENSIONAHA.121.18192">
-                            https://doi.org/10.1161/HYPERTENSIONAHA.121.18192
-                          </a>
-                          .<br></br>
-                          <sup>iii</sup>Ibrahim Sales and Yazed AlRuthia,
-                          “Arabic Translation and Cultural Adaptation of
-                          Hill-Bone Compliance to High Blood Pressure Therapy
-                          Scale,” <em>Saudi Pharmaceutical Journal</em> 32, no.
-                          5 (May 1, 2024): 102053,{" "}
-                          <a href="https://doi.org/10.1016/j.jsps.2024.102053">
-                            https://doi.org/10.1016/j.jsps.2024.102053
-                          </a>
-                          .<br></br>
-                          <sup>iv</sup>Azli Baharudin et al., “Knowledge,
-                          Attitude and Behaviour on Salt Intake and Its
-                          Association with Hypertension in the Malaysian
-                          Population: Findings from MyCoSS (Malaysian Community
-                          Salt Survey),”{" "}
-                          <em>Journal of Health, Population and Nutrition</em>{" "}
-                          40, no. 1 (May 31, 2021): 6,{" "}
-                          <a href="https://doi.org/10.1186/s41043-021-00235-0">
-                            https://doi.org/10.1186/s41043-021-00235-0
-                          </a>
-                          .<br></br>
-                          <sup>v</sup>Anggun Permata Sari et al., “The Maumere
-                          Exercise Therapy and Low Salt Diet in Hypertension
-                          Sufferers: An Effort to Lower Blood Pressure: Maumere
-                          Exercise Therapy and Low Salt Diet in Hypertension
-                          Sufferers: An Effort to Lower Blood Pressure,”{" "}
-                          <em>Retos</em> 56 (July 1, 2024): 1016–25,{" "}
-                          <a href="https://doi.org/10.47197/retos.v56.106718">
-                            https://doi.org/10.47197/retos.v56.106718.
-                          </a>
-                          .<br></br>
-                        </p>
-                      </div>
+                     
                     </div>
                   </Card>
                 </div>

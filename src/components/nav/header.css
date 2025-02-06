@@ -1,19 +1,18 @@
 /* Default header styles for large screens (no changes needed here) */
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
-  background-color: transparent;
+  background-color: rgb(10, 5, 45); /* Sticky background color for large screens */
   z-index: 10;
-  padding: 15px 30px;
+  padding: 0px 30px;
   display: flex;
   font-family: "Poppins", sans-serif;
   justify-content: space-between;
   align-items: center;
 }
-
 /* Ensure logo and text are aligned horizontally */
 .logo {
   display: flex;
@@ -86,6 +85,20 @@
 
 /* Media Query for Small Screens (Mobile/Tablets) */
 @media (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(10, 5, 45);
+    z-index: 10;
+    /* padding: 0px 30px; */
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+  }
   .logo {
     font-size: 22px; /* Adjust logo size for small screens */
     margin-left: 10px; /* Add a little margin on the left */
@@ -112,7 +125,8 @@
     cursor: pointer;
     position: absolute; /* Position icon to the top right */
     top: 20px; /* Adjust top margin */
-    right: 20px; /* Adjust right margin */
+    display: flex;
+    justify-content: flex-end;
   }
 
   /* Position the header content closer to the left and right */
@@ -165,6 +179,20 @@
 
 /* Additional Media Query for Very Small Screens (Small Phones) */
 @media (max-width: 576px) {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(10, 5, 45);
+    z-index: 10;
+    /* padding: 0px 30px; */
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+  }
   .logo {
     font-size: 18px; /* Smaller logo font size */
     margin-left: -7px; /* Less margin for smaller screens */
@@ -187,7 +215,7 @@
   .sidebar {
     font-size: 24px;
     top: -7px; /* Adjust the top margin */
-    left: 60px; /* Adjust the right margin */
+    /* Adjust the right margin */
   }
 }
 

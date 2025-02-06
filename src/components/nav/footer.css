@@ -5,9 +5,9 @@
   background-repeat: no-repeat;
   color: #fff;
   width: 100%;
-  padding: 50px 20px;
+  padding: 20px 0px 15px 55px;
   text-align: center;
-  height: 300px;
+  height: 380px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -131,7 +131,7 @@
   /* Ensure columns remain in one horizontal row even on small screens */
   .footer .ant-row {
     flex-wrap: nowrap; /* Prevent wrapping to new lines */
-    padding-bottom: 53px;
+    padding-bottom: 30px;
   }
 
   /* Adjust column widths to ensure they stay horizontal */

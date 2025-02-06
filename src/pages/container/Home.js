@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Card } from "antd";
 import Slider from "react-slick"; // Import react-slick for slider
 import Video from "../../assets/videos/heartbeat.mp4";
 
@@ -13,7 +13,10 @@ import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme CSS
 import { useNavigate } from "react-router-dom";
 import "./home.css";
-
+import NVC from "../../assets/images/Nvc.png";
+import Embark from "../../assets/images/Embark.png";
+import Innos from "../../assets/images/Innos.png";
+import Boulder from "../../assets/images/boulder.png";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -101,7 +104,7 @@ const Home = () => {
               type="button"
               onClick={(e) => {
                 e.preventDefault();
-                window.scrollTo(0, 0); 
+                window.scrollTo(0, 0);
                 navigate("/application");
               }}
             >
@@ -167,6 +170,11 @@ const Home = () => {
             </button>
           </Col>
         </Row>
+        <Row>
+          <Col span={24}>
+            <h1 className="coll-text">Collaborators</h1>
+          </Col>
+        </Row>
 
         <Slider
           {...{
@@ -215,14 +223,29 @@ const Home = () => {
           ))}
         </Slider>
 
-        <Row justify="center" align="middle" className="info-section">
-          <div className="as-seen-in-content">
-            <h3 postion="center">As Seen In</h3>
-            <p>Embark</p>
-            <p>Innosphere Ventures</p>
-            <p>Boulder Startup Week</p>
-            <p>NVC CU Boulder</p>
-          </div>
+        <Row>
+          <Col span={24}>
+            <h1 className="coll-text">As Seen In</h1>
+          </Col>
+        </Row>
+        <Row
+          justify="center"
+          align="middle"
+          gutter={16}
+          style={{ padding: "30px" }}
+        >
+          <Col xs={24} sm={12} md={6} style={{padding:"25px"}}>
+            <img alt="example" src={NVC} className="image-card-seen" />
+          </Col>
+          <Col xs={24} sm={12} md={6} style={{padding:"25px"}}>
+            <img alt="example" src={Innos} className="image-card-seen" />
+          </Col>
+          <Col xs={24} sm={12} md={6} style={{padding:"25px"}}>
+            <img alt="example" src={Boulder} className="image-card-seen" />
+          </Col>
+          <Col xs={24} sm={12} md={6} style={{padding:"25px"}}>
+            <img alt="example" src={Embark} className="image-card-seen" />
+          </Col>
         </Row>
       </main>
     </div>

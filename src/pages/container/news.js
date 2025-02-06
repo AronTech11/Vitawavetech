@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Row, Col } from "antd";
 import { Link } from "react-router-dom";
 import NewsJson from "./News.json"; // Import the JSON data
 import coloradooeditlogo from "./coloradooeditlogo.svg"; 
 import thetechnology from "./thetechnology.jpeg"; 
 import NSF from "./icorps.jpg"; 
-
 
 import BackGroundVideo from "../../assets/videos/world.mp4";
 import "./news.css";
@@ -16,6 +15,15 @@ const imageMapping = {
   "coloradooeditlogo.svg": coloradooeditlogo,  
   "thetechnology.jpeg": thetechnology,  
   "icorps.jpg": NSF
+};
+
+// Helper function to truncate text after a certain number of words
+const truncateText = (text, wordLimit) => {
+  const words = text.split(" ");
+  if (words.length > wordLimit) {
+    return words.slice(0, wordLimit).join(" ") + "...";
+  }
+  return text;
 };
 
 const News = () => {
@@ -51,7 +59,7 @@ const News = () => {
                     src={imageMapping[newsItem.coverImage]} // Use mapped image
                     style={{
                       height: "200px",
-                      padding: "20px",
+                      marginBottom: "-50px",
                       objectFit: "contain",
                     }}
                   />
@@ -62,7 +70,14 @@ const News = () => {
                     <div>
                       <p className="title">{newsItem.title}</p>
                       <p>{newsItem.date}</p>
-                      <p>{newsItem.abstract}</p>
+                      <p>
+                        {truncateText(newsItem.abstract, 40)}{" "}
+                        {newsItem.abstract.split(" ").length >40 && (
+                          <Link to={`/blogs/${index}`} className="news-link">
+                            Read more
+                          </Link>
+                        )}
+                      </p>
                     </div>
                   }
                 />

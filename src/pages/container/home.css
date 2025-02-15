@@ -277,32 +277,86 @@ button:hover {
   /* Info Section and Text */
   .col-text, .col-text-contrast {
     width: 100%; /* Full width for smaller screens */
-    padding: 40px 20px; /* Adjust padding */
-    max-height: 450px; /* Set max height */
-    overflow: hidden; /* Prevent overflow */
-    text-overflow: ellipsis; 
+    padding: 10px 20px; /* Adjust padding */
+    bottom: 25px;
+    max-height: auto; /* Remove max height */
+    flex-direction: column; /* Ensure elements are stacked vertically */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start; /* Align text to the left */
   }
 
-  /* Add ellipsis effect for paragraphs in small screens */
+  /* Allow text to wrap properly */
   .col-text p, .col-text-contrast p {
-    white-space: nowrap;
+    width: 100%;
+    white-space: normal;  
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* Show up to 3 lines */
+    line-clamp: 7; /* Show up to 3 lines */
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    line-height: 2.3em;
+    max-height: calc(2.3em * 7); /* Ensure it fits 3 full lines */
+    text-align: left; /* Align text to left */
+    transition: all 0.3s ease-in-out;
   }
 
   /* Position the "Learn More" button at the bottom-right */
-  .col-text button, .col-text-contrast button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  .col-text button {
+    display: block;              /* Makes button a block element */
+    width: auto;                 /* Allows the button to size based on its content */
+    margin: 30px auto 20px 0;    /* Add 30px space at the top, auto for horizontal centering, and 20px at the bottom */  background-color: #003366;   /* Dark blue background */
+    color: white;                /* White text color */
+    padding: 10px 20px;          /* Padding for the button */
+    text-decoration: none;       /* Remove underline */
+    font-size: 16px;             /* Font size */
+    border: 2px solid white;     /* White border around button */
+    border-radius: 5px;          /* Rounded corners */
+    text-align: center;          /* Ensure text is centered */
+    cursor: pointer;            /* Change cursor on hover */
+    transition: all 0.3s ease;   /* Smooth transition for hover effect */
+    position: absolute;          /* Adjust position relative to the parent */
+    bottom: 0px;                /* Keeps the button at the bottom */
+    right: 10px;                 /* Aligns it to the right */
   }
-
+  
+  
+  /* Hover Effect for the button */
+  .col-text button:hover {
+    background-color: #001a33;  /* Darker blue on hover */
+    border-color: #ffffff;      /* Keep the white border on hover */
+    text-decoration: none;      /* Remove underline on hover */
+  }
+  
+  
+  .col-text-contrast button{
+    display: block;              /* Makes button a block element */
+    width: auto;                 /* Allows the button to size based on its content */
+    margin: 30px auto 20px 0;    /* Add 30px space at the top, auto for horizontal centering, and 20px at the bottom */  background-color: #003366;   /* Dark blue background */
+    background-color: rgb(10, 5, 33);
+    padding: 10px 20px;          /* Padding for the button */
+    text-decoration: none;       /* Remove underline */
+    font-size: 16px;             /* Font size */
+    border: 2px solid white;     /* White border around button */
+    border-radius: 5px;          /* Rounded corners */
+    text-align: center;          /* Ensure text is centered */
+    cursor: pointer;            /* Change cursor on hover */
+    transition: all 0.3s ease;   /* Smooth transition for hover effect */
+    position: absolute;          /* Adjust position relative to the parent */
+    bottom: 0px;                /* Keeps the button at the bottom */
+    right: 10px;                 /* Aligns it to the right */
+  }
+  
+  /* Hover Effect for the button */
+  .col-text-contrast button:hover {
+    background-color: white;  /* Darker blue on hover */
+    border-color: #001a33;      /* Keep the white border on hover */
+    text-decoration: none;      /* Remove underline on hover */
+  }
   .button-contrast {
-    padding: 8px 18px; /* Adjust padding */
-  }
+    padding: 8px 
+    }
 
   /* Adjust image card */
   .image-card {
@@ -313,6 +367,12 @@ button:hover {
     align-items: center;
     overflow: hidden;
     border-radius: 15px;
+  }
+
+  /* Image styling */
+  .image-col {
+    order: -1; /* Moves the image to the top */
+    margin-bottom: 20px; /* Space between the image and text */
   }
 
   /* Hero Image Adjustments */
@@ -334,42 +394,104 @@ button:hover {
   .hero-text p:first-of-type {
     display: none; /* Hide first paragraph on smaller screens */
   }
+
+  /* Additional Adjustments for mobile -- April Maram */
+  .section-container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  .section-container h2, 
+  .section-container p {
+    position: relative;
+    width: 100%;
+    /*margin: 0 auto;*/
+    padding: 10px;
+    border-radius: 8px;
+  }
+
 }
 
 @media (max-width: 480px) {
   /* Info Section Card - Adjustments for mobile screens */
   .col-text, .col-text-contrast {
+    bottom: 25px;
     padding: 30px 15px; /* Adjust padding for mobile */
     font-size: 1rem;
     max-height: 450px;
+    flex-direction: column; /* Ensure elements are stacked vertically */
   }
 
-  /* Button Positioning for Small Screens - Link Style */
-  .col-text button, .col-text-contrast button {
-    position: absolute;
-    bottom: 7px;
-    right: 10px;
-    background: transparent;  /* Make the button background transparent */
-    color: rgb(10, 5, 33);     /* Set the text color to match your theme (dark color) */
-    border: none;             /* Remove the border */
-    text-decoration: underline;  /* Underline the text like a link */
-    font-size: 14px;            /* Adjust font size */
-    padding: 0;                /* No padding since it's a link style */
-    cursor: pointer;          /* Ensure the cursor changes to a pointer */
-    transition: color 0.3s, text-decoration 0.3s; /* Add smooth transition for hover effect */
+  /* Position the "Learn More" button at the bottom-right */
+  .col-text button {
+    display: block;              /* Makes button a block element */
+    width: auto;                 /* Allows the button to size based on its content */
+    margin: 30px auto 20px 0;    /* Add 30px space at the top, auto for horizontal centering, and 20px at the bottom */  background-color: #003366;   /* Dark blue background */
+    color: white;                /* White text color */
+    padding: 10px 20px;          /* Padding for the button */
+    text-decoration: none;       /* Remove underline */
+    font-size: 16px;             /* Font size */
+    border: 2px solid white;     /* White border around button */
+    border-radius: 5px;          /* Rounded corners */
+    text-align: center;          /* Ensure text is centered */
+    cursor: pointer;            /* Change cursor on hover */
+    transition: all 0.3s ease;   /* Smooth transition for hover effect */
+    position: absolute;          /* Adjust position relative to the parent */
+    bottom: 0px;                /* Keeps the button at the bottom */
+    right: 10px;                 /* Aligns it to the right */
   }
 
-  /* Hover Effect for Link-Style Button */
-  .col-text button:hover, .col-text-contrast button:hover {
-    color: rgb(0, 50, 100);  /* Change color on hover (adjust to your theme) */
-    text-decoration: none;   /* Remove underline on hover */
+
+  /* Hover Effect for the button */
+  .col-text button:hover {
+    background-color: #001a33;  /* Darker blue on hover */
+    border-color: #ffffff;      /* Keep the white border on hover */
+    text-decoration: none;      /* Remove underline on hover */
   }
+
+
+.col-text-contrast button{
+  display: block;              /* Makes button a block element */
+  width: auto;                 /* Allows the button to size based on its content */
+  margin: 30px auto 20px 0;    /* Add 30px space at the top, auto for horizontal centering, and 20px at the bottom */  background-color: #003366;   /* Dark blue background */
+  background-color: rgb(10, 5, 33);
+  padding: 10px 20px;          /* Padding for the button */
+  text-decoration: none;       /* Remove underline */
+  font-size: 16px;             /* Font size */
+  border: 2px solid white;     /* White border around button */
+  border-radius: 5px;          /* Rounded corners */
+  text-align: center;          /* Ensure text is centered */
+  cursor: pointer;            /* Change cursor on hover */
+  transition: all 0.3s ease;   /* Smooth transition for hover effect */
+  position: absolute;          /* Adjust position relative to the parent */
+  bottom: 0px;                /* Keeps the button at the bottom */
+  right: 10px;                 /* Aligns it to the right */
+}
+
+/* Hover Effect for the button */
+.col-text-contrast button:hover {
+  background-color: white;  /* Darker blue on hover */
+  border-color: #001a33;      /* Keep the white border on hover */
+  text-decoration: none;      /* Remove underline on hover */
+}
+
 
   /* Image Card Adjustment for Mobile */
   .image-card {
     max-height: 400px;
     width: 100%;
     padding-top: 25px;
+  }
+
+  /* Image styling */
+  .image-col {
+    order: -1; /* Moves the image to the top */
+    margin-bottom: 20px; /* Space between the image and text */
   }
 
   /* Hero Text Font Size for Mobile */
@@ -553,3 +675,7 @@ button:hover {
     font-size: 0.9rem;
   }
 }
+
+
+
+

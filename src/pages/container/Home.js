@@ -88,6 +88,7 @@ const Home = () => {
 
         <Row justify="center" align="middle" className="info-section">
           <Col xs={24} sm={24} md={16} lg={15} xl={15} className="col-text">
+          <div class="section-container">
             <h3>Introducing In-ear Blood Pressure (eBP) Monitor</h3>
             <p>
               VitaWave’s eBP monitoring device represents a significant
@@ -110,6 +111,7 @@ const Home = () => {
             >
               Learn More
             </button>
+            </div>
           </Col>
 
           <Col xs={24} sm={24} md={8} lg={9} xl={9} className="image-col">
@@ -141,6 +143,7 @@ const Home = () => {
             xl={15}
             className="col-text-contrast"
           >
+            <div class="section-container">
             <h3>About VitaWave</h3>
             <p>
               VitaWave focuses on empowering health with cuffless precision -
@@ -168,6 +171,7 @@ const Home = () => {
             >
               Learn More
             </button>
+            </div>
           </Col>
         </Row>
         <Row>

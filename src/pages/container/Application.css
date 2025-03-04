@@ -3,51 +3,50 @@
   min-height: 100vh;
   background-color: #f0f2f5;
   padding: 0;
+  margin: 0;
   box-sizing: border-box; /* Ensures padding and borders are included in element width/height */
 }
 
-
 /* Hero Section Styling */
 .app-hero-image-container {
+  background-color: rgb(10, 5, 33);
+  position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent overflow of the video */
-  position: relative; /* Ensure the container is positioned correctly */
+  height: 79vh;
 }
 
-.app-hero-image-container video {
-  position: absolute; /* Position the video absolutely within the container */
-  top: 50%; /* Position the video at 50% from the top */
-  left: 50%; /* Position the video at 50% from the left */
-  transform: translate(-50%, -50%); /* Offset the video by 50% of its width and height to center it */
-  width: 100%; /* Make the video fill the container width */
-  height: 100%; /* Make the video fill the container height */
-  object-fit: cover; /* Ensure the video covers the container without distorting */
-  object-position: center; /* Center the video content */
-}
-
-.app-hero-image-container h3 {
+/* Hero Text Styling */
+.hero-application-text {
   position: absolute;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  z-index: 10;
-  text-align: center;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.hero-application-text h1 {
+  font-size: 2.6rem; /* Reduced font size for small screens */
+  margin-bottom: 2rem;
+}
+
+.hero-application-text h2 {
+  margin-bottom: 5rem;
 }
 
 /* Content Section Styling */
 .app-site-layout-content {
-  padding: 40px 20px;
+  padding-top: 0;
+  margin-top: -1rem;
   background-color: #fff;
   min-height: 280px;
 }
 
 .app-application-container {
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .app-application-title {
@@ -97,9 +96,17 @@
 
 /* Small and medium screens */
 @media (max-width: 768px) {
-  .app-hero-image-container h3 {
-    font-size: 2.5rem;
+  .app-hero-image-container h1 {
+    padding-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
   }
+
+  .hero-application-text h2 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
 
   .app-site-layout-content {
     padding: 24px 16px;
@@ -122,8 +129,15 @@
 
 /* Mobile screens */
 @media (max-width: 576px) {
-  .app-hero-image-container h3 {
-    font-size: 1.8rem;
+  .app-hero-image-container h1 {
+    padding-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  .hero-application-text h2 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
   }
 
   .app-hero-image-container {

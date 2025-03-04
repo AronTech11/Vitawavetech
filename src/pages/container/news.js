@@ -6,7 +6,6 @@ import coloradooeditlogo from "./coloradooeditlogo.svg";
 import thetechnology from "./thetechnology.jpeg"; 
 import NSF from "./icorps.jpg"; 
 
-import BackGroundVideo from "../../assets/videos/world.mp4";
 import "./news.css";
 
 const { Meta } = Card;
@@ -29,21 +28,13 @@ const truncateText = (text, wordLimit) => {
 const News = () => {
   return (
     <main className="News-Application-content">
-      {/* Background Video */}
-      <video autoPlay muted loop playsInline className="News-background-video">
-        <source src={BackGroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div className="News-background-overlay" />
-
       {/* Hero Section */}
-      <div className="News-hero-heading">
-        <h1>
-          <span style={{ fontSize: "100px" }}>News</span>
-        </h1>
-        <h3>Stay up-to-date with the latest happenings and</h3>
-        <h3>innovations coming out of VitaWave Tech</h3>
+      <div className="news-main-section">
+        <div className="News-hero-heading">
+          <h1>News</h1>
+          <h3>Stay up-to-date with the latest happenings and</h3>
+          <h3>innovations coming out of VitaWave Tech</h3>
+        </div>
       </div>
 
       {/* Articles Grid */}

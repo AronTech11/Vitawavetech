@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout, Row, Col, Card } from "antd";
 import "./Application.css";
-import Video from "../../assets/videos/medical-beat.mp4";
 import ApplicationData from "./Application.json";
 
 const { Content } = Layout;
@@ -12,8 +11,11 @@ const Application = () => {
       <Content>
         <div className="hero-section">
           <div className="app-hero-image-container">
-            <video src={Video} autoPlay loop muted playsInline />
-            <h3>Application</h3>
+           {/*} <video src={Video} autoPlay loop muted playsInline />*/}
+           <div className="hero-application-text">
+           <h1>Applications</h1>
+           <h2>of the In-Ear Blood Pressure Monitor</h2>
+           </div>
           </div>
         </div>
 
@@ -31,7 +33,6 @@ const Application = () => {
                     {/* The main project details */}
                     <div className="app-application-paragraph">
                       <h1>
-                        Application of the In-Ear Blood Pressure Monitor in
                         Addressing Unmet Needs
                       </h1>
                       <p>

@@ -8,7 +8,6 @@ import COFounder1 from "../../assets/images/robin1.png";
 import Engineer from "../../assets/images/Aron.jpg";
 import Deepanshu from "../../assets/images/deep.png";
 import April from "../../assets/images/april.png";
-import BackGroundVideo from "../../assets/videos/world.mp4";
 // import BackGroundVideo1 from "../../assets/videos/video-2.mp4";
 
 
@@ -71,23 +70,12 @@ const teamMembers = [
 const Team = () => {
   return (
     <main className="team-content">
-      {/* Background Video */}
-      <video autoPlay muted loop playsInline className="background-video">
-        <source src={BackGroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <Row>
-        <Col span={24}>
-          <h4 className="meet_team">
-            <span className="gradient-text"></span>
-          </h4>
-          <h4 className="meet_team">
-            <span>Our Team</span>
-          </h4>
-        </Col>
-      </Row>
-
+      <div className="team-main-section">
+        <div className="team-main-text">
+            <h1>Our Team</h1>
+        </div>
+      </div>
+       
       {/* Map through teamMembers to display each card */}
       <Row justify="center" align="middle" className="team-info-section">
         {teamMembers.map((member, index) => (

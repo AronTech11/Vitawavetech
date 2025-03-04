@@ -1,12 +1,13 @@
 /* Content Styles */
 .team-content {
-  background-color: #000;
+  background-color: rgb(10, 5, 33);
   position: relative;
   z-index: 1;
   padding: 20px;
+  animation: slideInLeft 2s ease-out forwards;
+
 }
 
-/* Background Video */
 /* Background Video */
 .background-video {
   position: absolute;
@@ -20,6 +21,30 @@
   box-shadow: inset 0 0 50px rgba(11, 10, 10, 0.8); /* Apply a shadow to darken the edges */
 }
 
+/* Header for the Team page */
+.team-main-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  
+}
+
+/* Main Text Styling */
+.team-main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.team-main-text h1 {
+  font-size: 2.6rem; /* Reduced font size for small screens */
+}
+
+
 
 /* Overlay for Text Contrast */
 .background-overlay {
@@ -32,21 +57,21 @@
   z-index: -1;
 }
 
-/* Heading for "Meet the Members" */
+/* Heading for "Meet the Members" 
 .meet_team {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.2rem; /* Slightly reduce font size for better readability */
+  font-size: 2.2rem; /* Slightly reduce font size for better readability 
   padding: 30px;
   padding-top: 80px;
   color: white;
   z-index: 1;
   width: 100%;
   opacity: 0;
-  animation: fadeInUp 2s ease-out forwards;
+ animation: slideInLeft 2s ease-out forwards;
 
-}
+}*/
 
 /* Gradient Text Styles */
 .gradient-text {
@@ -190,8 +215,32 @@
 }
 
 @media (max-width: 480px) {
+
+  .team-main-section{
+    margin-bottom: 0px;
+    padding: 0;
+  }
+  /* Main Text Styling */
+  .team-main-text {
+    position: absolute;
+    text-align: center;
+    font-size: 0.5rem;
+  }
+
+  /* Main Text Styling */
+  .team-main-text h1{
+    font-size: 1.5rem;
+    flex-direction: column;
+    height: 30vh; /* Full viewport height */
+  }
+
+  .team-info-section {
+    margin-top: -90px; /* Negative margin pulls it closer */
+  }
+
   .team-card-col {
-    padding: 2px;
+
+    padding: 15px;
   }
   .meet_team {
     font-size: 2rem; /* Further reduce text size */

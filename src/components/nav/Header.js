@@ -76,7 +76,7 @@ const Header = () => {
           News
         </NavLink>
         <NavLink className="nav-link ripple" exact to="/contact-us" onClick={onClose} aria-current="page">
-          Contact us
+          Contact Us
         </NavLink>
       </Drawer>
     </>

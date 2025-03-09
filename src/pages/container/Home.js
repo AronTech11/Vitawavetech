@@ -73,11 +73,10 @@ const Home = () => {
                   <p>
                     <a
                       href="https://cacm.acm.org/research/ebp/"
-                      target="_blank"
+                      target="_blank"                      
                     >
-                      Published studies on ACM 2021
+                      Published studies on ACM 2021.
                     </a>
-                    .
                   </p>
                 </div>
                 <video src={Video} autoPlay loop muted playsInline />

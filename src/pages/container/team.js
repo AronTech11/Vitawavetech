@@ -6,7 +6,7 @@ import CTO from "../../assets/images/hingba.jpg";
 import COFounder from "../../assets/images/nam.jpeg";
 import COFounder1 from "../../assets/images/robin1.png";
 import Engineer from "../../assets/images/Aron.jpg";
-import Deepanshu from "../../assets/images/deep.png";
+/*import Deepanshu from "../../assets/images/deep.png";*/
 import April from "../../assets/images/april.png";
 // import BackGroundVideo1 from "../../assets/videos/video-2.mp4";
 
@@ -18,14 +18,14 @@ const { Meta } = Card;
 const teamMembers = [
   {
     name: "Jason McGowin, Stanford MBA",
-    designation: "CEO",
+    designation: "CEO,",
     qualifications: "Co-Founder",
     image: CEO,
     social: "https://www.linkedin.com/in/jasonmcgowin/"
   },
   {
     name: "T Hingba, MBA-MEng",
-    designation: "CTO",
+    designation: "CTO,",
     qualifications: "Co-Founder",
     image: CTO,
     social: "https://www.linkedin.com/in/t-hingba" // LinkedIn link
@@ -39,7 +39,7 @@ const teamMembers = [
   },
   {
     name: "Nam Bui, Ph.D",
-    designation: "CSO",
+    designation: "CSO,",
     qualifications: "Technical Advisor",
     image: COFounder,
     social: "https://www.linkedin.com/in/namnbui/"
@@ -51,13 +51,13 @@ const teamMembers = [
     image: Engineer,
     social: "https://www.linkedin.com/in/taluba-aron-hopson/"
   },
-  {
+ /*{ He booted out for now but he shall return from the ashes} {
     name: "Deepanshu Gupta, MS",
     designation: "Data Scientist",
     qualifications: "",
     image: Deepanshu,
     social: "https://www.linkedin.com/in/deepanshu-gupta2805/"
-  },
+  },}*/
   {
     name: "April Yang Maram",
     designation:"Software Developer",

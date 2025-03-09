@@ -9,10 +9,13 @@
     "p3": "The grant from OEDIT underscores the state's commitment to fostering groundbreaking innovations in healthcare technology. This funding will enable VitaWave to advance its research into non-invasive blood pressure monitoring, a critical area of need in modern medicine. As hypertension remains a leading risk factor for cardiovascular diseases, the ability to monitor blood pressure accurately and conveniently can significantly enhance patient outcomes and management strategies.",
     "p4": "The proposed in-ear device aims to provide continuous and accurate blood pressure readings, facilitating better self-management for patients and reducing the burden on healthcare systems.",
     "p5": "The significance of this project extends beyond technological advancement; it aligns with current trends in telehealth and remote patient monitoring. Research indicates that self-monitoring of blood pressure, particularly through telehealth models, can lead to improved management of hypertension and better adherence to treatment protocols.",
-    "ref": "“OEDIT Announces Grants to 22 Colorado Startups and Researchers in the Advanced Industries | Colorado Office of Economic Development and International Trade,” accessed November 23, 2024, https://oedit.colorado.gov/press-release/oedit-announces-grants-to-22-colorado-startups-and-researchers-in-the-advanced. Qi-Fang Huang et al., “Ambulatory Blood Pressure Monitoring to Diagnose and Manage Hypertension,” Hypertension 77, no. 2 (February 2021): 254–64, https://doi.org/10.1161/HYPERTENSIONAHA.120.14591. Richard J McManus et al., “Efficacy of Self-Monitored Blood Pressure, with or without Telemonitoring, for Titration of Antihypertensive Medication (TASMINH4): An Unmasked Randomised Controlled Trial,” The Lancet 391, no. 10124 (March 10, 2018): 949–59, https://doi.org/10.1016/S0140-6736(18)30309-X."
+    "ref":
+    {
+        "text": "Learn more about OEDIT: ",
+        "url": "https://oedit.colorado.gov/press-release/oedit-announces-grants-to-22-colorado-startups-and-researchers-in-the-advanced"
+    }
   },
-
-  {
+    {
     "title": "VitaWave Joins NSF I-Corps Spring 2025 Cohort to Accelerate In-Ear BP Monitor Commercialization",
     "date": "Boulder, CO, December 16, 2024",
     "coverImage": "icorps.jpg",
@@ -22,7 +25,11 @@
     "p3": "The I-Corps program will be essential in helping VitaWave conduct customer discovery and solidify its product-market fit, addressing a significant unmet need in accurate, portable blood pressure monitoring.",
     "p4": "The insights gained from this program will further strengthen VitaWave's mission to bring its groundbreaking blood pressure solution to the marketplace, particularly for the growing demand in health tech.",
     "p5": "By participating in I-Corps, VitaWave is poised to gain critical expertise and resources to accelerate the commercialization of its technology, ultimately benefiting patients and healthcare providers.",
-    "ref": "NSF I-Corps Teams Program, National Science Foundation, accessed December 16, 2024, https://new.nsf.gov/funding/initiatives/i-corps/about-i-corps"
-}
+    "ref":
+    {
+        "text": "Learn more about NSF I-Corp: ",
+        "url": "https://new.nsf.gov/funding/initiatives/i-corps/about-i-corps"
+    }
+  }
 
 ]

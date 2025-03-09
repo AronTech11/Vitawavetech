@@ -45,8 +45,8 @@ const Footer = () => {
       <Row>
         <Col span={24}>
           <p style={{paddingBottom: "100px"}}>
-            Copyright <CopyrightOutlined/>2024 VitaWave Tech. All Rights Reserved. Powered by
-            VitaWave Tech
+            Copyright <CopyrightOutlined/> 2024 VitaWave Tech, Inc. All Rights Reserved. Powered by
+            VitaWave Tech, Inc.
           </p>
         </Col>
       </Row>

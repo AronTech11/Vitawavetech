@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"; // To extract the dynamic URL parameter
 import { Card } from "antd";
 import NewsJson from "./News.json"; // Import the same JSON data
-import BackGroundVideo from "../../assets/videos/world.mp4";
 import oeditColoradoLogo from "./coloradooeditlogo.svg";
 import thetechnology from "./thetechnology.jpeg";
 import NSF from "./icorps.jpg";
@@ -31,12 +30,6 @@ const Blogs = () => {
 
   return (
     <main className="Blog-Application-content">
-      {/* Background Video */}
-      <video autoPlay muted loop playsInline className="Blog-background-video">
-        <source src={BackGroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
       <div className="Blog-background-overlay" />
 
       {/* Hero Section */}
@@ -70,8 +63,10 @@ const Blogs = () => {
         </div>
 
         {/* References */}
-        <h5>References:</h5>
-        <p>{blogData.ref}</p>
+        <br></br>
+        <p>
+          {blogData.ref.text} <a href={blogData.ref.url} target="_blank" class="fg-white" rel="noopener noreferrer">{blogData.ref.url}</a>
+        </p>
       </Card>
     </main>
   );
